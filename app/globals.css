@@ -121,3 +121,36 @@ body {
 		@apply bg-background text-foreground;
 	}
 }
+
+.shadow-cashback {
+	box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.18);
+}
+
+.grid-cashback {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(269px, 1fr));
+	gap: 44px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+	.grid-cashback {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(269px, 1fr));
+		gap: 44px;
+	}
+}
+
+@media (max-width: 720px) {
+	.grid-cashback {
+		gap: 16px;
+	}
+}
+
+@media (max-width: 320px) {
+	.grid-cashback {
+		/* grid-template-columns: repeat(auto-fit, minmax(269px, 4fr)); */
+
+		gap: 10px;
+	}
+}

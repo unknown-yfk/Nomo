@@ -22,7 +22,7 @@ export default function Custom404() {
 
 			<Link
 				href='/'
-				className='text-accent px-[60px] py-[14px] leading-[24.2px] text-[20px] font-bold border rounded-[41px] border-accent hover:border-accenthover hover:text-accenthover transition-colors'
+				className='text-accent px-[60px] py-[14px] leading-[24.2px] text-[20px] font-bold border rounded-[41px] border-accent hover:border-accenthover hover:text-accenthover transition-colors mb-[160px]'
 			>
 				Повернутися на головну сторінку
 			</Link>

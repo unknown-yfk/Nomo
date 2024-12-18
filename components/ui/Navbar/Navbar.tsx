@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const navItems = [
 	{ label: 'Кешбек', href: '/cashback' },
@@ -15,7 +15,7 @@ const Navbar = () => {
 	const pathname = usePathname()
 	return (
 		<nav>
-			<ul className='flex items-center font-bold gap-[38px]'>
+			<ul className='hidden lg:flex items-center font-bold gap-[38px]'>
 				{navItems.map(item => (
 					<li key={item.href}>
 						<Link

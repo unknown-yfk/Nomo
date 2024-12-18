@@ -1,0 +1,62 @@
+import Image from 'next/image'
+
+interface PaginationProps {
+	currentPage: number
+	totalPages: number
+	onPageChange: (page: number) => void
+}
+
+const Pagination = ({
+	currentPage,
+	totalPages,
+	onPageChange,
+}: PaginationProps) => {
+	return (
+		<div className='flex items-center justify-center space-x-2 mt-8 gap-[18px] mb-[50px]'>
+			<button
+				onClick={() => onPageChange(currentPage - 1)}
+				disabled={currentPage === 1}
+				className='flex items-center text-[20px]  gap-[14px] py-[5px] text-[#0f0f0f] hover:text-accenthover disabled:text-[#ABABAB] leading-[126%] tracking-[-4%]'
+			>
+				<Image
+					src={'/cashback/chevron-left.svg'}
+					alt=''
+					width={24}
+					height={24}
+				/>
+				ПОПЕРЕДНЯ
+			</button>
+
+			{Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+				<button
+					key={page}
+					onClick={() => onPageChange(page)}
+					className={`w-[40px] h-[35px] rounded-[7px] text-[25px] leading-[126%] tracking-[-4%]  font-light ${
+						currentPage === page
+							? ' text-[#0f0f0f] bg-[#EBEBEB] '
+							: 'text-[#0f0f0f] hover:text-accenthover '
+					}`}
+				>
+					{page}
+				</button>
+			))}
+
+			<button
+				onClick={() => onPageChange(currentPage + 1)}
+				disabled={currentPage === totalPages}
+				className='flex items-center text-[20px] gap-[14px] py-[5px] text-[#0f0f0f] hover:text-accenthover disabled:text-[#ABABAB] leading-[126%] tracking-[-4%]'
+			>
+				НАСТУПНА
+				<Image
+					src={'/cashback/chevron-right.svg'}
+					alt=''
+					width={24}
+					height={24}
+					className='disabled:stroke-[#ABABAB]'
+				/>
+			</button>
+		</div>
+	)
+}
+
+export default Pagination
