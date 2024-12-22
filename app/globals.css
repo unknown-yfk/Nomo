@@ -40,6 +40,49 @@ body {
 	background-position: center right;
 }
 
+/* .bg-text {
+	position: absolute;
+} */
+
+.bg-text {
+	background-image: url('../public/partnership/bg-text.svg');
+	background-position: center;
+	width: 137px;
+	height: 137px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	left: 25px;
+	right: 0;
+	top: -30px;
+	z-index: -1;
+}
+
+.bg-text-2 {
+	background-image: url('../public/partnership/bg-text.svg');
+	background-position: center;
+	width: 137px;
+	height: 137px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* left: px; */
+	right: -105px;
+	top: -30px;
+	z-index: -1;
+}
+
+.bg-we {
+	background-image: url('../public/we/BG.svg');
+	width: 100%;
+	height: 120%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	z-index: -1;
+	position: absolute;
+}
+
 .grid-project {
 	display: grid;
 	grid-template-columns: repeat(2, 612px);
@@ -55,6 +98,63 @@ body {
 
 .bg {
 	background: linear-gradient(#d0ddfd, #f5f8ff);
+}
+
+.gradient-text {
+	display: inline-block;
+	/* padding: 20px 40px; Внутренние отступы */
+	text-align: center;
+	/* font-size: 24px; */
+	/* font-weight: bold; */
+	/* font-family: Arial, sans-serif; */
+
+	/* Градиент для текста */
+	background: linear-gradient(
+		135deg,
+		#7a96ac 0%,
+		#eaffff 18%,
+		#c2d4ef 31%,
+		#ffffff 49%,
+		#d4e5f5 62%,
+		#abb8cb 75%,
+		#bccad7 95%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; /* Цвет текста - прозрачный */
+	text-fill-color: transparent;
+
+	/* Градиент для бордера */
+
+	/* Дополнительные стили */
+
+	background-color: #000;
+
+	color: white; /* Резервный цвет текста */
+}
+.gradient-border {
+	border: 1px solid;
+	border-color: linear-gradient(
+		135deg,
+		#7a96ac 0%,
+		#eaffff 18%,
+		#c2d4ef 31%,
+		#ffffff 49%,
+		#d4e5f5 62%,
+		#abb8cb 75%,
+		#bccad7 95%
+	);
+	/* border-radius: 38px !important; */
+	/* border-image-slice: 1; */
+	/* background-origin: border-box;
+	background-clip: content-box, border-box; */
+}
+
+.bg-header {
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.52) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
 }
 
 @layer base {
@@ -124,6 +224,10 @@ body {
 
 .shadow-cashback {
 	box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.18);
+}
+
+.benefit-shadow {
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .grid-cashback {

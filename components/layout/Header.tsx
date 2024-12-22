@@ -2,11 +2,21 @@
 
 import Image from 'next/image'
 import Navbar from '../ui/Navbar/Navbar'
+import { usePathname } from 'next/navigation'
+// import { useRouter } from 'next/router'
 
 const Header = () => {
+	const navigation = usePathname()
+
 	return (
-		<header className={' z-[3]'}>
-			<div className='flex justify-between items-center px-20 py-[21px] bg-[#0f0f0f]'>
+		<header
+			className={`${navigation === '/we' ? 'absolute' : ''} w-full z-[3]`}
+		>
+			<div
+				className={`  flex justify-between items-center px-20 py-[21px] ${
+					navigation === '/we' ? 'bg-header' : 'bg-[#0f0f0f]'
+				}`}
+			>
 				<div>
 					<Image
 						src={'/header/logo.svg'}
