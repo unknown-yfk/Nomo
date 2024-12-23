@@ -24,7 +24,7 @@ const mockData = [
 		isActive: true,
 	},
 	// Adding more mock items to demonstrate pagination
-	...Array(16)
+	...Array(45)
 		.fill(null)
 		.map((_, index) => ({
 			id: index + 3,
@@ -37,7 +37,7 @@ const mockData = [
 		})),
 ]
 
-const ITEMS_PER_PAGE = 8
+const ITEMS_PER_PAGE = 16
 
 const Cashback = () => {
 	const [currentPage, setCurrentPage] = useState(1)

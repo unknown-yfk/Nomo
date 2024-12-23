@@ -11,10 +11,15 @@ const Pagination = ({
 	totalPages,
 	onPageChange,
 }: PaginationProps) => {
+	const handlePageChange = (page: number) => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+		onPageChange(page)
+	}
+
 	return (
 		<div className='flex items-center justify-center space-x-2 mt-8 gap-[18px] mb-[50px]'>
 			<button
-				onClick={() => onPageChange(currentPage - 1)}
+				onClick={() => handlePageChange(currentPage - 1)}
 				disabled={currentPage === 1}
 				className='flex items-center text-[20px]  gap-[14px] py-[5px] text-[#0f0f0f] hover:text-accenthover disabled:text-[#ABABAB] leading-[126%] tracking-[-4%]'
 			>
@@ -30,7 +35,7 @@ const Pagination = ({
 			{Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
 				<button
 					key={page}
-					onClick={() => onPageChange(page)}
+					onClick={() => handlePageChange(page)}
 					className={`w-[40px] h-[35px] rounded-[7px] text-[25px] leading-[126%] tracking-[-4%]  font-light ${
 						currentPage === page
 							? ' text-[#0f0f0f] bg-[#EBEBEB] '
@@ -42,7 +47,7 @@ const Pagination = ({
 			))}
 
 			<button
-				onClick={() => onPageChange(currentPage + 1)}
+				onClick={() => handlePageChange(currentPage + 1)}
 				disabled={currentPage === totalPages}
 				className='flex items-center text-[20px] gap-[14px] py-[5px] text-[#0f0f0f] hover:text-accenthover disabled:text-[#ABABAB] leading-[126%] tracking-[-4%]'
 			>
