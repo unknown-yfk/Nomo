@@ -5,23 +5,23 @@ import Image from 'next/image'
 const news = [
 	{
 		image: '/main/news-1.svg',
-		title: 'Development of Site Version 1.6.3 Completed',
+		title: 'Закінчилася розробка сайту Version 1.6.3',
 		description:
-			"The term 'site' encompasses a wide range of projects, from simple landing pages to complex online services with hundreds of screens and thousands of functions.",
-		date: 'Yesterday, 10:46',
+			'Поняття "сайт" охоплює безліч різних проєктів: від простеньких посадкових сторінок до складних онлайн-сервісів, що складаються із сотень екранів і тисяч функцій.',
+		date: 'Вчора, 10:46',
 	},
 	{
 		image: '/main/news-3.svg',
-		title: 'Register Now!',
+		title: 'Зареєструйся зараз!',
 		description:
-			'All registered users will receive 10 Ncoin in their Portfolio.',
-		date: 'July 1, 2024',
+			'Всім зареєстрованим користувачам нарахується 10Ncoin в Потрфоліо.',
+		date: '01.01.2025',
 	},
 	{
 		image: '/main/news-2.svg',
-		title: 'About the Future',
-		description: 'Development of the Ncoin Cashback/Exchange app begins.',
-		date: 'June 15, 2024',
+		title: 'Про майбутнє',
+		description: 'Починається розробка додатка Ncoin Кешбек/Біржа.',
+		date: '18.01.2025',
 	},
 ]
 
@@ -30,7 +30,7 @@ const News: FC = () => {
 		<section className='bg-[#0f0f0f]'>
 			<div className='containers'>
 				<h2 className='pt-[240px] pb-[81px] text-[54px] leading-[64px] text-[#fff] font-extrabold text-center'>
-					Stay Updated with Nomo
+					Слідкуйте за новинами разом з Номо
 				</h2>
 				<div className='flex flex-col space-y-6 w-full mx-auto pb-[149px]'>
 					{news.map((item, index) => (
@@ -40,8 +40,8 @@ const News: FC = () => {
 				<div className='grid grid-cols-2 gap-[256px]'>
 					<div className='flex justify-between items-center flex-col'>
 						<h3 className='text-[25px] text-center leading-[126%] tracking-[-4%] uppercase font-bold w-[453px]'>
-							With us, you’re not just a client; you’re part of our family, our
-							invaluable!
+							З нами ти не просто клієнт, ти - частина нашої сім'ї, наш
+							безцінний
 						</h3>
 						<Image
 							src={'/main/number1.png'}
@@ -54,7 +54,7 @@ const News: FC = () => {
 					<div className=' flex justify-between items-end mb-[120px] '>
 						<div className=' bottom-[120px] mx-auto'>
 							<p className='relative text-[14px] top-[0] '>
-								With every purchase in
+								З кожною покупкою в
 							</p>
 							<Image
 								src={'/main/nomo.svg'}
@@ -64,7 +64,7 @@ const News: FC = () => {
 								height={90}
 							/>
 							<p className='text-[13px] w-[167px] text-center mx-auto '>
-								your cashback grows with every purchase
+								ваш кешбек зростає.
 							</p>
 							<div className='relative  '>
 								<Image

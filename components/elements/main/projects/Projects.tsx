@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { FC } from 'react'
 
 const projectItem = [
 	{
@@ -6,7 +7,7 @@ const projectItem = [
 		title: 'Власна Криптовалюта',
 		main: 'Ncoin',
 		text: '— постійно працюємо над вдосконаленням криптовалюти та додаванням нових інноваційних функцій, які полегшують ваші фінансові операції та забезпечують додаткові переваги для користувачів. Реліз запланований на ',
-		date: '01.12.2024р',
+		date: '01.02.2025р',
 		img: '/main/project-img1.png',
 		objectFit: 'cover',
 	},
@@ -15,7 +16,7 @@ const projectItem = [
 		title: 'Інвестиційний Портфель',
 		main: 'N-Inwest',
 		text: '— це інноваційна платформа, що дозволяє користувачам інвестувати кешбеки у різноманітні фінансові активи. Вкладення допомагають збільшити пасивний дохід користувачів. Проект націлений на оптимізацію використання кешбеків для досягнення фінансової стабільності. Реліз запланований на ',
-		date: '01.01.2025р',
+		date: '01.03.2025р',
 		img: '/main/project-img2.png',
 		objectFit: 'contain',
 	},
@@ -23,26 +24,30 @@ const projectItem = [
 	{
 		id: 3,
 		title: 'Гаманець',
-		main: 'Гаманець',
+		main: 'Гаманець ',
 		text: 'буде підтримувати інтеграцію з різноманітними сервісами та додатками, щоб забезпечити розширені можливості для користувачів. Реліз запланований на ',
-		date: '01.12.2024р',
+		date: '01.06.2025р',
 		img: '/main/project-img3.png',
 		objectFit: 'cover',
 	},
 	{
 		id: 4,
 		title: 'Кешбек NOMO',
-		main: 'Інноваційна',
+		main: 'Інноваційна ',
 		text: 'програма кешбеку пропонує унікальну можливість отримувати кешбек за покупки через криптовалюту, що відкриває нові можливості для користувачів заробляти та використовувати криптовалюту. Реліз запланований на ',
-		date: '01.12.2024р',
+		date: '01.01.2025р',
 		img: '/main/project-img4.png',
 		objectFit: 'cover',
 	},
 ]
 
-const Projects = () => {
+interface PartnersProps {
+	bgColor: string
+}
+
+const Projects: FC<PartnersProps> = ({ bgColor }) => {
 	return (
-		<section className='bg-[#0f0f0f]'>
+		<section className={`${bgColor}`}>
 			<div className={'containers'}>
 				<h2 className='py-[60px] text-center text-[54px] leading-[72.9px] font-extrabold'>
 					Дізнайся більше про наші проекти

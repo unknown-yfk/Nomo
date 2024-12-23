@@ -10,7 +10,7 @@ const MainPage = () => {
 		<main className={''}>
 			<Hero />
 			<ProductOverview />
-			<Projects />
+			<Projects bgColor='bg-[#0f0f0f]' />
 			<About />
 			<Statistics />
 			<News />

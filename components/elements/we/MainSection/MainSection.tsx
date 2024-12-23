@@ -5,8 +5,8 @@ const MainSection: FC = () => {
 	return (
 		<section className={'relative min-h-screen w-full'}>
 			<div className='bg-we '></div>
-			<div className=' containers  mx-auto  flex flex-col lg:flex-row items-center justify-between'>
-				<div className='lg:w-1/2 mt-[270px] '>
+			<div className='max-w-[1400px] my-0 px-[70px]  mx-auto  flex flex-col lg:flex-row items-center justify-between'>
+				<div className='lg:w-1/2 mt-[203px] '>
 					<div className=''>
 						<h1 className='leading-[126%] lg:text-[56px] font-bold mb-6 tracking-tight items-center gap-2 '>
 							{/* <Image
@@ -23,11 +23,11 @@ const MainSection: FC = () => {
 							Ми віримо - таємниця успішних покупок полягає в обраному кешбеку.
 							Отримуйте максимум вигоди разом із nomo.
 						</p>
-						<div className='flex gap-4 mb-[211px]'>
+						<div className='flex gap-4 mb-[242px]'>
 							<a href='#' className='hover:opacity-80 transition-opacity'>
 								<Image
 									src={'/we/apple.svg'}
-									width={159}
+									width={144}
 									height={42}
 									alt='Nomo App Interface'
 								/>
@@ -43,7 +43,7 @@ const MainSection: FC = () => {
 						</div>
 					</div>
 
-					<div className='space-y-6 '>
+					{/* <div className='space-y-6 '>
 						<div className='flex items-center gap-4'>
 							<span className='text-[#FF8D2A] text-5xl font-bold'>
 								5 000 000 +
@@ -62,7 +62,7 @@ const MainSection: FC = () => {
 							<span className='text-[#FF8D2A] text-5xl font-bold'>830 +</span>
 							<span className='text-gray-300'>партнерів у різних країнах</span>
 						</div>
-					</div>
+					</div> */}
 				</div>
 
 				<div className='lg:w-1/2 mt-8 lg:mt-[200px] '>

@@ -12,13 +12,13 @@ import Link from 'next/link'
 
 const Footer = () => {
 	return (
-		<footer className='bg-[#0F0F0F] text-white pt-5 pb-[159px] '>
+		<footer className='bg-[#0F0F0F] text-white pt-5 pb-[98px] '>
 			<div className='containers mx-auto '>
 				<div className='grid grid-cols-2 items-start gap-[216px] '>
 					{/* Contact Information */}
 					<div className='mx-auto'>
 						<h3 className='text-[25px] font-bold leading-[126%] tracking-[-4%] text-center  mb-[13px]'>
-							CONTACT US
+							Зв’язок з нами
 						</h3>
 						<div className='space-y-[27px]'>
 							<div className='flex items-center gap-[30px]'>
@@ -30,9 +30,9 @@ const Footer = () => {
 									height={55}
 								/>
 								<p className='text-[#fff] text-[21px] font-medium'>
-									84 Ivasyuka Street, Ivano-Frankivsk,
+									вул. Івасюка, 84, Івано-Франківськ,
 									<br />
-									Ivano-Frankivsk Oblast, 76000
+									Івано-Франківська область, 76000
 								</p>
 							</div>
 							<div className='flex items-center gap-[30px]'>
@@ -63,8 +63,8 @@ const Footer = () => {
 					</div>
 					{/* Social Media Links */}
 					<div className='mx-auto'>
-						<h3 className='text-[25px] font-bold  leading-[126%] tracking-[-4%] mb-6'>
-							FOLLOW US ON SOCIAL MEDIA!
+						<h3 className='text-[25px] font-bold  leading-[126%] tracking-[-4%] mb-6 uppercase'>
+							Слідкуй за нами у соцмережах!
 						</h3>
 						<div className='flex gap-[12px] items-center justify-center'>
 							<Link

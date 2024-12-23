@@ -6,9 +6,15 @@ const Hero = () => {
 		<section className={'main-hero bg-black'}>
 			<div className=' mx-auto flex flex-col items-center'>
 				{/* <div> */}
-				<Image src={'/main/main.png'} alt='' width={423} height={352} />
+				<Image
+					src={'/main/main.png'}
+					alt=''
+					width={423}
+					height={352}
+					className='mt-20'
+				/>
 				<h1 className='relative bottom-16 text-[86px] font-extrabold leading-[104.08px]  text-center w-[591px]'>
-					ГЛОБАЛЬНА <span className='text-accent'>DIGITAL 2024</span> ПОДІЯ
+					ГЛОБАЛЬНА <span className='text-accent'>DIGITAL 2025</span> ПОДІЯ
 				</h1>
 				<p className='relative bottom-4 px-[21px] py-[7px] bg-accent text-[36px] leading-[43.57px] text-background font-bold rounded-2xl '>
 					Розділіть призовий фонд 1,000.000Ncoin

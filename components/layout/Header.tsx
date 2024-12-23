@@ -7,15 +7,15 @@ import { usePathname } from 'next/navigation'
 
 const Header = () => {
 	const navigation = usePathname()
+	const mainPage = navigation === '/' ? 'absolute' : ''
+	const wePage = navigation === '/we' ? 'absolute' : ''
+	const mainPageHeader = navigation === '/' ? 'bg-header' : 'bg-[#0f0f0f]'
+	const wePageHeader = navigation === '/we' ? 'bg-header' : 'bg-[#0f0f0f]'
 
 	return (
-		<header
-			className={`${navigation === '/we' ? 'absolute' : ''} w-full z-[3]`}
-		>
+		<header className={`${mainPage} ${wePage} w-full z-[3]`}>
 			<div
-				className={`  flex justify-between items-center px-20 py-[21px] ${
-					navigation === '/we' ? 'bg-header' : 'bg-[#0f0f0f]'
-				}`}
+				className={`  flex justify-between items-center px-20 py-[21px] ${mainPageHeader} ${wePageHeader}`}
 			>
 				<div>
 					<Image
@@ -30,13 +30,14 @@ const Header = () => {
 					<button className='bg-accent px-[30px] py-[10px] font-bold rounded-[40px] hover:bg-[#FFBF88] transition-colors'>
 						Вхід
 					</button>
-					<button>
+					<button className='flex items-center gap-[11px] text-[24px] font-normal'>
 						<Image
 							src={'/header/language.svg'}
 							alt='Логотип Nomo'
-							width={44}
-							height={44}
+							width={42}
+							height={42}
 						/>
+						Українська
 					</button>
 				</div>
 			</div>
