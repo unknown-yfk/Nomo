@@ -4,6 +4,8 @@ import Header from '@/components/layout/Header'
 import AboutSection from './AboutSection/AboutSection'
 import ProgramSection from './ProgramSection/ProgramSection'
 import Projects from '../main/projects/Projects'
+import { ReviewsSection } from './ReviewsSection/ReviewsSection'
+import Downloads from './Downloads/Downloads'
 
 const We: FC = () => {
 	return (
@@ -12,6 +14,8 @@ const We: FC = () => {
 			<AboutSection />
 			<ProgramSection />
 			<Projects bgColor='text-[#0f0f0f]' />
+			<ReviewsSection />
+			<Downloads />
 		</main>
 	)
 }
