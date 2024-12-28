@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import Head from 'next/head'
 
 const inter = Inter({
 	subsets: ['cyrillic'],
@@ -21,6 +22,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ua'>
+			<Head>
+				<meta
+					name='google-site-verification'
+					content='aW3Xlc5OqSPPscmVbpQrK3HXEbZ1_PLsVa-TMf-Ian4'
+				/>
+			</Head>
 			<body className={`${inter.className} antialiased`}>
 				<Header />
 				{children}
