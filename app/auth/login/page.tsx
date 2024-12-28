@@ -15,7 +15,7 @@ export default async function LoginPage() {
 	}
 
 	return (
-		<div className='min-h-screen flex items-center justify-center flex-col bg-pink-50'>
+		<div className='min-h-screen flex items-center justify-center flex-col bg-[#FFFFFF]'>
 			<div className='flex justify-center mb-[41px]'>
 				<Image src={'/auth/logo.svg'} alt='Nomo' width={275} height={35} />
 			</div>

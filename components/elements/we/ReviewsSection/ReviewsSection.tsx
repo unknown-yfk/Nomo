@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { ReviewsItem } from './ReviewsItem'
 import Image from 'next/image'
+import DevelopModal from '@/components/ui/DevelopModal/DevelopModal'
 
 const testimonials = [
 	{
@@ -55,6 +56,7 @@ export const ReviewsSection = () => {
 	const isMobile = useIsMobile()
 	const itemsPerPage = isMobile ? 1 : 3
 	const totalPages = Math.ceil(testimonials.length / itemsPerPage)
+	const [showDev, setShowDev] = useState(false)
 
 	const nextSlide = () => {
 		setCurrentIndex(prev => (prev + 1) % totalPages)
@@ -72,74 +74,87 @@ export const ReviewsSection = () => {
 
 	const visibleTestimonials = getCurrentTestimonials()
 
+	const openDevelopModal = () => {
+		setShowDev(true)
+	}
+
 	return (
-		<section className='py-16 px-4 max-w-7xl mx-auto text-[#0f0f0f]'>
-			<h2 className='text-[54px] font-extrabold text-center mb-[56px] '>
-				<span className='relative'>
-					Що кажуть наші
-					<span className='absolute -bottom-3 left-[55%] transform -translate-x-1/2 w-full h-[9px] bg-accent rounded-full'></span>
-				</span>{' '}
-				<span className='relative'>
-					клієнти
-					<span className='absolute -bottom-3 left-[55%] transform -translate-x-1/2 w-[55%] h-[9px] bg-accent rounded-full'></span>
-				</span>
-			</h2>
+		<>
+			<section className='py-16 px-4 max-w-7xl mx-auto text-[#0f0f0f]'>
+				<h2 className='text-[54px] font-extrabold text-center mb-[56px] '>
+					<span className='relative'>
+						Що кажуть наші
+						<span className='absolute -bottom-3 left-[55%] transform -translate-x-1/2 w-full h-[9px] bg-accent rounded-full'></span>
+					</span>{' '}
+					<span className='relative'>
+						клієнти
+						<span className='absolute -bottom-3 left-[55%] transform -translate-x-1/2 w-[55%] h-[9px] bg-accent rounded-full'></span>
+					</span>
+				</h2>
 
-			<div className='relative'>
-				<div className='flex items-center justify-center gap-8 '>
-					<button
-						onClick={prevSlide}
-						className='hidden md:flex  items-center justify-center '
-						aria-label='Previous slide'
-					>
-						<Image src={'/we/arrow-left.svg'} alt='' width={26} height={31} />
-					</button>
+				<div className='relative'>
+					<div className='flex items-center justify-center gap-8 '>
+						<button
+							onClick={prevSlide}
+							className='hidden md:flex  items-center justify-center '
+							aria-label='Previous slide'
+						>
+							<Image src={'/we/arrow-left.svg'} alt='' width={26} height={31} />
+						</button>
 
-					<div className='overflow-hidden '>
-						<div className='flex gap-[36px] py-6 px-4'>
-							{visibleTestimonials.map(testimonial => (
-								<div
-									key={testimonial.id}
-									className='min-w-full md:min-w-[calc(33.333%-1.5rem)] flex justify-center'
+						<div className='overflow-hidden '>
+							<div className='flex gap-[36px] py-6 px-4'>
+								{visibleTestimonials.map(testimonial => (
+									<div
+										key={testimonial.id}
+										className='min-w-full md:min-w-[calc(33.333%-1.5rem)] flex justify-center'
+									>
+										<ReviewsItem {...testimonial} />
+									</div>
+								))}
+							</div>
+							<div className='text-left mt-8'>
+								<button
+									className='text-[#919191] font-bold text-[18px] underline  transition-colors'
+									onClick={openDevelopModal}
 								>
-									<ReviewsItem {...testimonial} />
-								</div>
-							))}
+									Додати коментар...
+								</button>
+							</div>
 						</div>
-						<div className='text-left mt-8'>
-							<button className='text-[#919191] font-bold text-[18px] underline  transition-colors'>
-								Додати коментар...
-							</button>
-						</div>
+
+						<button
+							onClick={nextSlide}
+							className='hidden md:flex  items-center justify-center '
+							aria-label='Next slide'
+						>
+							<Image
+								src={'/we/arrow-right.svg'}
+								alt=''
+								width={26}
+								height={31}
+							/>
+						</button>
 					</div>
 
-					<button
-						onClick={nextSlide}
-						className='hidden md:flex  items-center justify-center '
-						aria-label='Next slide'
-					>
-						<Image src={'/we/arrow-right.svg'} alt='' width={26} height={31} />
-					</button>
-				</div>
+					{/* Mobile Navigation */}
+					<div className='flex justify-center gap-4 mt-8 md:hidden'>
+						<button
+							onClick={prevSlide}
+							className='flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors'
+						>
+							<ChevronLeft className='w-6 h-6' />
+						</button>
+						<button
+							onClick={nextSlide}
+							className='flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors'
+						>
+							<ChevronRight className='w-6 h-6' />
+						</button>
+					</div>
 
-				{/* Mobile Navigation */}
-				<div className='flex justify-center gap-4 mt-8 md:hidden'>
-					<button
-						onClick={prevSlide}
-						className='flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors'
-					>
-						<ChevronLeft className='w-6 h-6' />
-					</button>
-					<button
-						onClick={nextSlide}
-						className='flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 transition-colors'
-					>
-						<ChevronRight className='w-6 h-6' />
-					</button>
-				</div>
-
-				{/* Pagination Dots */}
-				{/* <div className='flex justify-center gap-2 mt-8'>
+					{/* Pagination Dots */}
+					{/* <div className='flex justify-center gap-2 mt-8'>
 					{Array.from({ length: totalPages }).map((_, index) => (
 						<button
 							key={index}
@@ -151,7 +166,9 @@ export const ReviewsSection = () => {
 						/>
 					))}
 				</div> */}
-			</div>
-		</section>
+				</div>
+			</section>
+			<DevelopModal isOpen={showDev} onClose={() => setShowDev(false)} />
+		</>
 	)
 }

@@ -7,6 +7,7 @@ import { createClient } from '@/lib/supabase/client'
 import BrandLogo from './brandlogo'
 import VerificationModal from '@/components/ui/VerificationModal/VerificationModal'
 import { LuLoader } from 'react-icons/lu'
+import Link from 'next/link'
 
 export default function RegisterForm() {
 	const [formData, setFormData] = useState({
@@ -55,6 +56,17 @@ export default function RegisterForm() {
 			const referralCode =
 				formData.referralCode ||
 				`REF${Math.random().toString(36).slice(2, 8).toUpperCase()}`
+
+			const { data: existingProfile } = await supabase
+				.from('user_profiles')
+				.select('*')
+				.eq('user_id', authData.user?.id)
+				.single()
+
+			if (existingProfile) {
+				setError('Профиль для этого пользователя уже существует.')
+				return
+			}
 
 			const { error: profileError } = await supabase
 				.from('user_profiles')
@@ -130,7 +142,7 @@ export default function RegisterForm() {
 
 					<Button
 						type='submit'
-						className='w-full bg-[#FF8A00] hover:bg-[#FF8A00]/90 rounded-[40px]'
+						className='w-full bg-[#FF8A00] hover:bg-accenthover rounded-[40px]'
 						disabled={loading}
 					>
 						{loading ? (
@@ -156,9 +168,12 @@ export default function RegisterForm() {
 				<div className='mt-6 text-center'>
 					<div className='text-sm text-gray-400'>
 						Вже є аккаунт?{' '}
-						<a href='/login' className='text-[#FF8A00] hover:text-[#FF8A00]/90'>
+						<Link
+							href='/auth/login'
+							className='text-[#FF8A00] hover:text-accenthover'
+						>
 							Увійти
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

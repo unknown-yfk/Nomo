@@ -15,7 +15,7 @@ export default async function RegisterPage() {
 	}
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-pink-50 flex-col'>
+		<div className='min-h-screen flex items-center justify-center bg-[#FFFFFF] flex-col'>
 			<div className='flex justify-center mb-[41px]'>
 				<Image src={'/auth/logo.svg'} alt='Nomo' width={275} height={35} />
 			</div>

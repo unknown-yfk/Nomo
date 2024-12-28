@@ -13,6 +13,7 @@ import {
 import { createClient } from '@/lib/supabase/client'
 import BrandLogo from '@/components/elements/auth/brandlogo'
 import Image from 'next/image'
+import { LuLoader } from 'react-icons/lu'
 
 interface VerificationModalProps {
 	email: string
@@ -141,7 +142,11 @@ export default function VerificationModal({
 							className='w-full bg-[#FF8A00] hover:bg-[#FF8A00]/90'
 							disabled={loading}
 						>
-							{loading ? 'Перевірка...' : 'Підтвердити'}
+							{loading ? (
+								<LuLoader className='size-[17px] animate-spin' />
+							) : (
+								'Підтвердити'
+							)}
 						</Button>
 
 						{error && (
