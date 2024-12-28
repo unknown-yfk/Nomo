@@ -123,7 +123,7 @@ export default function VerificationModal({
 									value={digit}
 									onChange={e => handleCodeChange(index, e.target.value)}
 									onKeyDown={e => handleKeyDown(index, e)}
-									className='w-12 h-12 text-center text-xl bg-transparent border-2 border-gray-600 rounded-lg focus:border-[#FF8A00] focus:outline-none'
+									className='w-12 h-12 text-center text-xl bg-transparent border-2 border-gray-600 rounded-lg focus:border-[#ff8d2a] focus:outline-none'
 								/>
 							))}
 						</div>
@@ -131,7 +131,7 @@ export default function VerificationModal({
 						<div className='text-center mb-6'>
 							<button
 								onClick={handleResendCode}
-								className='text-[#FF8A00] hover:text-[#FF8A00]/90'
+								className='text-[#ff8d2a] hover:text-accenthover'
 							>
 								Надіслати повторно
 							</button>
@@ -139,7 +139,7 @@ export default function VerificationModal({
 
 						<Button
 							onClick={handleVerification}
-							className='w-full bg-[#FF8A00] hover:bg-[#FF8A00]/90'
+							className='w-full bg-[#ff8d2a] hover:bg-accenthover'
 							disabled={loading}
 						>
 							{loading ? (

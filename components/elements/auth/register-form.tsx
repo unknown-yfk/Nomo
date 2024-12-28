@@ -37,6 +37,35 @@ export default function RegisterForm() {
 		setError(null)
 
 		try {
+			const { data: existingUser } = await supabase
+				.from('user_profiles')
+				.select('user_id')
+				.eq('email', formData.email)
+				.single()
+
+			if (existingUser) {
+				// Проверяем статус подтверждения email
+				const { data: authUser } = await supabase.auth.admin.getUserById(
+					existingUser.user_id
+				)
+
+				if (authUser && !authUser.user?.email_confirmed_at) {
+					// Email не подтвержден, отправляем код повторно
+					const { error: resendError } = await supabase.auth.resend({
+						type: 'signup',
+						email: formData.email,
+					})
+
+					if (resendError) throw resendError
+
+					setShowVerification(true)
+					return
+				} else {
+					setError('Користувач з такою електронною поштою вже існує')
+					return
+				}
+			}
+
 			const { data: authData, error: authError } = await supabase.auth.signUp({
 				email: formData.email,
 				password: formData.password,
@@ -56,17 +85,6 @@ export default function RegisterForm() {
 			const referralCode =
 				formData.referralCode ||
 				`REF${Math.random().toString(36).slice(2, 8).toUpperCase()}`
-
-			const { data: existingProfile } = await supabase
-				.from('user_profiles')
-				.select('*')
-				.eq('user_id', authData.user?.id)
-				.single()
-
-			if (existingProfile) {
-				setError('Профиль для этого пользователя уже существует.')
-				return
-			}
 
 			const { error: profileError } = await supabase
 				.from('user_profiles')
