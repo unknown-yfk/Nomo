@@ -1,4 +1,6 @@
 import BrandLogo from '@/components/elements/auth/brandlogo'
+import Dashboard from '@/components/elements/dashboard/Dashboard'
+import { getUserProfile } from '@/lib/database'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 
@@ -13,35 +15,35 @@ export default async function DashboardPage() {
 		redirect('/login')
 	}
 
-	return (
-		<div className='min-h-screen bg-[#1C1C1C] text-white'>
-			<div className='max-w-4xl mx-auto p-8'>
-				<div className='flex justify-between items-center mb-8'>
-					<BrandLogo />
-				</div>
+	// Fetch user profile data
+	try {
+		// Fetch user profile data with error handling
+		const profile = await getUserProfile(session.user.id)
 
-				<div className='bg-gray-800 rounded-lg p-6'>
-					<h1 className='text-2xl font-bold mb-4'>Особистий кабінет</h1>
-					<div className='space-y-4'>
-						<div>
-							<label className='text-gray-400'>Email:</label>
-							<p>{session.user.email}</p>
-						</div>
-						<div>
-							<label className='text-gray-400'>ID користувача:</label>
-							<p>{session.user.id}</p>
-						</div>
-						<div>
-							<label className='text-gray-400'>Останній вхід:</label>
-							<p>
-								{new Date(session.user.last_sign_in_at || '').toLocaleString(
-									'uk-UA'
-								)}
-							</p>
-						</div>
-					</div>
+		if (!profile) {
+			console.error('No profile found for user:', session.user.id)
+			// You might want to redirect to a profile creation page
+			// or create a default profile
+			return (
+				<div className='min-h-screen bg-[#0f0f0f] text-white p-8'>
+					<p>
+						Профіль не знайдено. Будь ласка, зверніться до служби підтримки.
+					</p>
 				</div>
+			)
+		}
+
+		return (
+			<div className='min-h-screen bg-[#0f0f0f] text-white'>
+				<Dashboard session={session} profile={profile} />
 			</div>
-		</div>
-	)
+		)
+	} catch (error) {
+		console.error('Error in dashboard:', error)
+		return (
+			<div className='min-h-screen bg-[#0f0f0f] text-white p-8'>
+				<p>Помилка завантаження профілю. Спробуйте оновити сторінку.</p>
+			</div>
+		)
+	}
 }

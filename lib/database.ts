@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers'
 import { createClient } from './supabase/server'
 
 export async function createUserProfile(data: {
@@ -20,4 +21,23 @@ export async function createUserProfile(data: {
 	])
 
 	if (error) throw error
+}
+
+export async function getUserProfile(userId: string) {
+	const cookieStore = cookies()
+	// @ts-ignore
+	const supabase = await createClient(cookieStore)
+
+	const { data, error } = await supabase
+		.from('user_profiles')
+		.select('*')
+		.eq('user_id', userId)
+		.single()
+
+	if (error) {
+		console.error('Error fetching user profile:', error)
+		throw error
+	}
+
+	return data
 }

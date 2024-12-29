@@ -96,6 +96,11 @@ body {
 	box-shadow: 6px 6px 0 0 var(--accent);
 }
 
+.shadow-table {
+	box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.3),
+		-2px -2px 4px 0 rgba(255, 255, 255, 0.3);
+}
+
 .bg {
 	background: linear-gradient(#d0ddfd, #f5f8ff);
 }

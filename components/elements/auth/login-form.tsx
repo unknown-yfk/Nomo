@@ -107,7 +107,7 @@ export default function LoginForm() {
 
 					<Button
 						type='submit'
-						className='w-full bg-[#FF8A00] hover:bg-accenthover rounded-[40px]'
+						className='w-full bg-[#FF8A00] hover:bg-accenthover rounded-[40px] px-[30px] py-[10px]'
 						disabled={loading}
 					>
 						{loading ? (

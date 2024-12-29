@@ -139,7 +139,7 @@ export default function VerificationModal({
 
 						<Button
 							onClick={handleVerification}
-							className='w-full bg-[#ff8d2a] hover:bg-accenthover'
+							className='w-full bg-[#ff8d2a] hover:bg-accenthover px-[30px] py-[10px]'
 							disabled={loading}
 						>
 							{loading ? (
