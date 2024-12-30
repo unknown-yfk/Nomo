@@ -7,14 +7,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const images = [
-  "/carousel/inv1.jpg",
-  "/carousel/inv2.jpg",
-  "/carousel/inv3.jpg",
-  "/carousel/inv4.jpg",
-  "/carousel/inv5.jpg",
-  "/carousel/inv6.jpg",
-];
+// Placeholder for carousel items
+const placeholderItems = new Array(6).fill(null);
 
 export function CarouselSingle() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -67,19 +61,14 @@ export function CarouselSingle() {
           align: "start",
           loop: true,
         }}
-        className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-lg overflow-visible"
+        className=" pt-10 w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-lg overflow-visible"
       >
         <CarouselContent className="w-full h-full">
-          {images.map((imageUrl, index) => (
+          {placeholderItems.map((_, index) => (
             <CarouselItem key={index} className="w-full h-full">
               <Card className="w-full h-full">
-                <CardContent className="flex items-center justify-center w-full h-full">
-                  <img
-                    src={imageUrl}
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-full object-cover shadow-md transition-all duration-500"
-                    loading="lazy"
-                  />
+                <CardContent className="flex items-center justify-center w-full h-full bg-gray-200">
+                  <div className="w-full h-[150px] sm:h-[200px] md:h-[250px] bg-gray-400 rounded-md"></div>
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -104,7 +93,7 @@ export function CarouselSingle() {
       </div>
 
       <div className="py-2 text-center text-sm text-muted-foreground">
-        Slide {current} of {images.length}
+        Slide {current} of {placeholderItems.length}
       </div>
     </div>
   );
