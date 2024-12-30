@@ -68,7 +68,7 @@ export function CarouselSingle() {
           align: "start",
           loop: true,
         }}
-        className="w-full h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] shadow-lg rounded-lg overflow-hidden"
+        className="w-full h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] shadow-lg rounded-lg overflow-visible"
       >
         <CarouselContent className="w-full h-full">
           {images.map((imageUrl, index) => (
@@ -88,15 +88,18 @@ export function CarouselSingle() {
         </CarouselContent>
       </Carousel>
 
+      {/* Arrows outside of the carousel */}
       <div
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500 z-10"
         onClick={handlePrev}
+        style={{ left: "-40px" }} // Move left arrow outside
       >
         &#10094;
       </div>
       <div
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500 z-10"
         onClick={handleNext}
+        style={{ right: "-40px" }} // Move right arrow outside
       >
         &#10095;
       </div>
@@ -111,8 +114,8 @@ export function CarouselSingle() {
 export function CarouselContainer() {
   return (
     <div className="max-w-[920px] mx-auto mb-10 pt-5">
-      <div className="carousel-container shadow-lg p-0 overflow-hidden">
-        <div className="w-full h-[300px] overflow-hidden relative">
+      <div className="carousel-container shadow-lg p-0 overflow-visible">
+        <div className="w-full h-[400px] overflow-visible relative">
           <CarouselSingle />
         </div>
       </div>

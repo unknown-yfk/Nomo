@@ -79,14 +79,17 @@ export function CarouselScroll() {
           </CarouselItem>
 
           {mockData.map((item) => (
-            <CarouselItem key={item.id} className="flex-shrink-0 w-[90%] max-w-[250px]">
-              <Card className="h-full">
-                <CardContent className="flex flex-col items-center justify-center p-4 space-y-4">
+            <CarouselItem
+              key={item.id}
+              className="flex-shrink-0 w-[90%] max-w-[250px]"
+            >
+                <div className="flex flex-col items-center justify-center p-4 space-y-4">
                   <CashbackItem {...item} />
-                </CardContent>
-              </Card>
+                </div>
+          
             </CarouselItem>
           ))}
+
         </CarouselContent>
 
         <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2" />

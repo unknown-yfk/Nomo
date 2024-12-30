@@ -77,7 +77,7 @@ const Cashback = () => {
 				<div className='p-10'>
 					<div className="max-w-[920px] mx-auto mb-10 pt-5">
 						<div className="carousel-container shadow-lg p-0 overflow-hidden">
-							<div className="w-full h-[300px] overflow-hidden relative">
+							<div className="w-full h-[400px] overflow-hidden relative">
 								<CarouselSingle />
 							</div>
 						</div>
@@ -89,7 +89,7 @@ const Cashback = () => {
 								Найкращі пропозиції
 							</h2>
 						</div>
-						<div className='carousel-container bg-white rounded-lg shadow-lg p-4'>
+						<div className='carousel-container bg-white rounded-lg  p-4'>
 							<h2 className='text-[20px] font-semibold text-center mb-4'>
 								Scrolling Carousel
 							</h2>
