@@ -75,13 +75,13 @@ const Cashback = () => {
 		<main>
 			<section>
 				<div className='p-10'>
-					<div className="max-w-[920px] mx-auto mb-10 pt-5">
-						<div className="carousel-container shadow-lg p-0 overflow-hidden">
+					{/* <div className="max-w-[920px] mx-auto mb-10 pt-5"> */}
+						{/* <div className="carousel-container shadow-lg p-0 overflow-hidden"> */}
 							<div className="w-full h-[400px] overflow-hidden relative">
 								<CarouselSingle />
 							</div>
-						</div>
-					</div>
+						{/* </div> */}
+					{/* </div> */}
 
 					<div className='max-w-[1280px] mx-auto mb-20'>
 						<div className='text-start mb-6'>

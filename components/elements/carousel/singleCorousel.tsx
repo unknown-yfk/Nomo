@@ -19,7 +19,6 @@ const images = [
 export function CarouselSingle() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     if (!api) return;
@@ -68,7 +67,7 @@ export function CarouselSingle() {
           align: "start",
           loop: true,
         }}
-        className="w-full h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] shadow-lg rounded-lg overflow-visible"
+        className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-lg overflow-visible"
       >
         <CarouselContent className="w-full h-full">
           {images.map((imageUrl, index) => (
@@ -92,20 +91,20 @@ export function CarouselSingle() {
       <div
         className="absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500 z-10"
         onClick={handlePrev}
-        style={{ left: "-40px" }} // Move left arrow outside
+        style={{ left: "-40px" }}
       >
         &#10094;
       </div>
       <div
         className="absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-4xl hover:text-blue-500 z-10"
         onClick={handleNext}
-        style={{ right: "-40px" }} // Move right arrow outside
+        style={{ right: "-40px" }}
       >
         &#10095;
       </div>
 
       <div className="py-2 text-center text-sm text-muted-foreground">
-        Slide {current} of {count}
+        Slide {current} of {images.length}
       </div>
     </div>
   );
@@ -113,9 +112,9 @@ export function CarouselSingle() {
 
 export function CarouselContainer() {
   return (
-    <div className="max-w-[920px] mx-auto mb-10 pt-5">
-      <div className="carousel-container shadow-lg p-0 overflow-visible">
-        <div className="w-full h-[400px] overflow-visible relative">
+    <div className="max-w-full w-full mx-0 sm:mx-auto sm:mb-10 pt-5">
+      <div className="carousel-container shadow-lg p-0 sm:overflow-visible">
+        <div className="w-full h-[250px] sm:h-[300px] md:h-[400px] overflow-visible relative">
           <CarouselSingle />
         </div>
       </div>
