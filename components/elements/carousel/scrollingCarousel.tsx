@@ -49,6 +49,7 @@ const mockData = [
   },
 ]
 
+
 export function CarouselScroll() {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
