@@ -1,0 +1,98 @@
+import * as React from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import CashbackItem from "@/components/elements/cashback/CashbackItem"
+import CashbackModal from "../modal/CashBackModal/cashBackModal"
+
+const mockData = [
+  {
+    id: 1,
+    name: 'Hyatt Regency',
+    logoUrl: '/cashback/item.svg',
+    discount: 15,
+    category: 'Hotels',
+    description: 'Luxury hotel chain with premium amenities',
+    isActive: true,
+  },
+  {
+    id: 2,
+    name: 'Hyatt Place',
+    logoUrl: '/cashback/item.svg',
+    discount: 10,
+    category: 'Hotels',
+    description: 'Business-friendly hotel chain',
+    isActive: true,
+  },
+  {
+    id: 3,
+    name: 'Hyatt Place',
+    logoUrl: '/cashback/item.svg',
+    discount: 10,
+    category: 'Hotels',
+    description: 'Business-friendly hotel chain',
+    isActive: true,
+  },
+  {
+    id: 4,
+    name: 'Hyatt Place',
+    logoUrl: '/cashback/item.svg',
+    discount: 10,
+    category: 'Hotels',
+    description: 'Business-friendly hotel chain',
+    isActive: true,
+  },
+]
+
+export function CarouselScroll() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
+  const handleAddDeal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
+
+  return (
+    <div className="w-full">
+      <Carousel className="w-full">
+        <CarouselContent className="flex gap-4">
+          <CarouselItem className="flex-shrink-0 w-[90%] max-w-[250px]">
+            <Card className="h-full flex justify-center items-center border-dashed border-2 border-gray-300">
+              <CardContent className="flex flex-col items-center justify-center p-4 space-y-4">
+                <button
+                  className="w-full h-full flex justify-center items-center text-7xl text-gray-500"
+                  onClick={handleAddDeal}
+                >
+                  +
+                </button>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+
+          {mockData.map((item) => (
+            <CarouselItem key={item.id} className="flex-shrink-0 w-[90%] max-w-[250px]">
+              <Card className="h-full">
+                <CardContent className="flex flex-col items-center justify-center p-4 space-y-4">
+                  <CashbackItem {...item} />
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+
+        <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2" />
+        <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2" />
+      </Carousel>
+
+      <CashbackModal isOpen={isModalOpen} onClose={handleCloseModal} />
+    </div>
+  )
+}

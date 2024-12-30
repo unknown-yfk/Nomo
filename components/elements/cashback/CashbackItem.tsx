@@ -19,25 +19,24 @@ const CashbackItem = ({
 	isActive,
 }: CashbackCardProps) => {
 	return (
-		<div className='bg-[#fff] rounded-[24px]  shadow-cashback hover:shadow-lg transition-all  w-[269px] '>
-			<div className='flex flex-col justify-center items-center space-y-4 '>
-				<Image src={logoUrl} alt={name} className='' width={269} height={183} />
+		<div className='bg-[#fff] rounded-[12px] shadow-cashback hover:shadow-lg transition-all w-[220px]'>
+			<div className='flex flex-col justify-center items-center space-y-3'>
+				<Image src={logoUrl} alt={name} width={220} height={150} />
 
-				<div className=' flex items-center justify-center gap-2 mt-1'>
+				<div className='flex items-center justify-center gap-2 mt-1'>
 					<Image
 						src={'/cashback/N.svg'}
 						alt={name}
-						className=''
-						width={27}
-						height={27}
+						width={20}
+						height={20}
 					/>
 
-					<span className='text-accent font-bold text-[25px]'>
+					<span className='text-accent font-bold text-[20px]'>
 						-{discount}%
 					</span>
 				</div>
 
-				<div className='flex justify-between w-full mt-[10px] px-[44.5px] pb-[10px]'>
+				<div className='flex justify-between w-full mt-[8px] px-[20px] pb-[8px]'>
 					<button
 						className={`text-gray-600 hover:text-custom-orange transition-colors ${
 							!isActive && 'opacity-50 cursor-not-allowed'
@@ -47,12 +46,11 @@ const CashbackItem = ({
 						<Image
 							src={'/cashback/cart.svg'}
 							alt={name}
-							className=''
-							width={37}
-							height={36}
+							width={30}
+							height={30}
 						/>
 					</button>
-					<div className='w-[3px] bg-[#CECECE] rounded-full h-9' />
+					<div className='w-[2px] bg-[#CECECE] rounded-full h-7' />
 					<button
 						className={`text-gray-600 hover:text-custom-orange transition-colors ${
 							!isActive && 'opacity-50 cursor-not-allowed'
@@ -62,9 +60,8 @@ const CashbackItem = ({
 						<Image
 							src={'/cashback/favorite.svg'}
 							alt={name}
-							className=''
-							width={37}
-							height={36}
+							width={30}
+							height={30}
 						/>
 					</button>
 				</div>
