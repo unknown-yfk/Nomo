@@ -65,9 +65,9 @@ export function CarouselScroll() {
     <div className="w-full">
       <Carousel className="w-full">
         <CarouselContent className="flex gap-4">
-          <CarouselItem className="flex-shrink-0 w-[90%] max-w-[250px]">
+          <CarouselItem className="flex-shrink-0 w-[90%] max-w-[250px] ">
             <Card className="h-full flex justify-center items-center border-dashed border-2 border-gray-300">
-              <CardContent className="flex flex-col items-center justify-center p-4 space-y-4">
+              <CardContent className="flex flex-col items-center justify-center p-4 space-y-4 " >
                 <button
                   className="w-full h-full flex justify-center items-center text-7xl text-gray-500"
                   onClick={handleAddDeal}

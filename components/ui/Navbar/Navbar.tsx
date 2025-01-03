@@ -43,14 +43,13 @@ const Navbar = () => {
 
 	return (
 		<nav>
-			<ul className='hidden lg:flex items-center font-bold gap-[38px]'>
+			<ul className="flex flex-col md:flex-row md:space-y-0  gap-[38px]">
 				{allNavItems.map(item => (
 					<li key={item.href}>
 						<Link
 							href={item.href}
-							className={`hover:text-accent transition-colors ${
-								pathname === item.href ? 'text-accent' : ''
-							}`}
+							className={`hover:text-accent transition-colors ${pathname === item.href ? 'text-accent' : ''
+								}`}
 						>
 							{item.label}
 						</Link>
@@ -61,3 +60,44 @@ const Navbar = () => {
 	)
 }
 export default Navbar
+
+
+// 'use client'
+
+// import Link from 'next/link'
+// import { usePathname } from 'next/navigation'
+
+// const Navbar = () => {
+//   const pathname = usePathname()
+
+
+//   const navItems = [
+// 	{ label: 'Кешбек', href: '/cashback' },
+// 	{ label: 'Карта', href: '/map' },
+// 	{ label: 'Криптовалюта', href: '/' },
+// 	{ label: 'Партнерство', href: '/partnership' },
+// 	{ label: 'Хто Ми', href: '/we' },
+// ]
+
+//   return (
+//     <nav>
+//       <ul className="flex flex-col md:flex-row md:space-y-0  gap-[38px]">
+//         {navItems.map((item) => (
+//           <li key={item.href}>
+//             <Link
+//               href={item.href}
+//               className={`text-base md:text-lg font-medium ${
+//                 pathname === item.href ? 'text-accent' : 'text-white hover:text-accent'
+//               } transition-colors`}
+//             >
+//               {item.label}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   )
+// }
+
+// export default Navbar
+

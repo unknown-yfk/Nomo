@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Head from 'next/head'
+import ConditionalHeader from '@/components/layout/ConditionalHeader'
 
 const inter = Inter({
 	subsets: ['cyrillic'],
@@ -29,7 +30,9 @@ export default function RootLayout({
 				/>
 			</Head>
 			<body className={`${inter.className} antialiased`}>
-				<Header />
+				{/* <Header /> */}
+				<ConditionalHeader />
+
 				{children}
 				<Footer />
 			</body>
