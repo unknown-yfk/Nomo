@@ -92,8 +92,8 @@ export function CarouselScroll() {
 
         </CarouselContent>
 
-        <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2" />
-        <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2" />
+        <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-accent" />
+        <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-accent" />
       </Carousel>
 
       <CashbackModal isOpen={isModalOpen} onClose={handleCloseModal} />
