@@ -1,7 +1,7 @@
 'use client'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
-import { chartData, chartConfig, getLineColor } from '../utils/chartUtils';
+import { chartData, chartConfig, getLineColor } from '../PortUtils/chartUtils';
 // 
 
 export function BarChartComponent() {
