@@ -198,7 +198,7 @@ export default function NavigationCards({ userProfile }: NavigationCardsProps) {
 				{/* First card N-Inwest */}
 				<Card
 					className='flex items-center justify-center p-4 bg-[#1E2128] border-none hover:bg-gray-800/50 transition-colors cursor-pointer rounded-[16px] sm:mr-[10px]'
-					style={{ width: '100%', height: '120px', minHeight: '120px', maxWidth: '100%' }}
+					style={{ width: '100%', height: '210px', minHeight: '120px', maxWidth: '100%' }}
 				>
 					<h3 className='font-light text-[#FFFFFF] text-base sm:text-lg lg:text-[19px]'>N-Inwest</h3>
 				</Card>
