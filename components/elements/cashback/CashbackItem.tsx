@@ -112,9 +112,8 @@ const CashbackItem = ({
 
 				<div className='flex justify-between w-full mt-[8px] px-[20px] pb-[8px]'>
 					<button
-						className={`text-gray-600 hover:text-custom-orange transition-colors ${
-							!isActive && 'opacity-50 cursor-not-allowed'
-						}`}
+						className={`text-gray-600 hover:text-custom-orange transition-colors ${!isActive && 'opacity-50 cursor-not-allowed'
+							}`}
 						disabled={!isActive}
 					>
 						<Image
@@ -126,9 +125,8 @@ const CashbackItem = ({
 					</button>
 					<div className='w-[2px] bg-[#CECECE] rounded-full h-7' />
 					<button
-						className={`text-gray-600 hover:text-custom-orange transition-colors ${
-							!isActive && 'opacity-50 cursor-not-allowed'
-						}`}
+						className={`text-gray-600 hover:text-custom-orange transition-colors ${!isActive && 'opacity-50 cursor-not-allowed'
+							}`}
 						disabled={!isActive}
 					>
 						<Image
