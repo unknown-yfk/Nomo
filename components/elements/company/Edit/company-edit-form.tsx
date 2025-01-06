@@ -5,13 +5,14 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { MapPin, Phone, Mail, Save, X, Plus, Minus, Upload } from 'lucide-react'
+import { MapPin, Phone, Mail, Save, X, Plus, Minus, Upload, Slash } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 
 type Company = {
     id: string
@@ -166,6 +167,35 @@ export default function CompanyEditForm({ params }: Props) {
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1C1C1C]"></div>
+                <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-6">
+          <Breadcrumb className="text-white">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Головна</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator >
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/companies">Компанії</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator >
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink className='text-accent' href="#">{company.name}</BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+            <h2 className=" md:text-2xl font-bold text-white mt-2">
+              Карточка-превью Компанії
+            </h2 >
+          </Breadcrumb>
+
+          <div>
+
+
+          </div>
+        </div>
             </div>
 
             {/* Company Info Header */}

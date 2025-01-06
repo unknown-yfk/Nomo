@@ -3,12 +3,13 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { MapPin, Phone, Mail, Clock, Map, Shield, SpadeIcon as Spa, Share2, BookmarkPlus, Barcode, Edit, QrCode, X, Star } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Map, Shield, SpadeIcon as Spa, Share2, BookmarkPlus, Barcode, Edit, QrCode, X, Star, Slash } from 'lucide-react'
 import { Facebook, Instagram, Twitter } from 'lucide-react'
 import { Company } from '@/types/company'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useRouter } from 'next/navigation'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 
 interface CompanyItemProps {
   company: Company;
@@ -29,6 +30,17 @@ export default function CompanyItem({ company }: CompanyItemProps) {
   return (
     <div className="min-h-screen bg-[#1C1C1C] text-white">
       {/* Hero Banner */}
+      {/* <div className="relative h-[200px] md:h-[400px] w-full">
+        <Image
+          src={company.bannerUrl || '/placeholder.svg?height=400&width=1200'}
+          alt={company.name}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1C1C1C]"></div>
+      </div> */}
+
+
       <div className="relative h-[200px] md:h-[400px] w-full">
         <Image
           src={company.bannerUrl || '/placeholder.svg?height=400&width=1200'}
@@ -37,8 +49,37 @@ export default function CompanyItem({ company }: CompanyItemProps) {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1C1C1C]"></div>
-      </div>
 
+        <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-6">
+          <Breadcrumb className="text-white">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Головна</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator >
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/companies">Компанії</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator >
+                <Slash />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbLink className='text-accent' href="#">{company.name}</BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+            <h2 className=" md:text-2xl font-bold text-white mt-2">
+              Карточка-превью Компанії
+            </h2 >
+          </Breadcrumb>
+
+          <div>
+
+
+          </div>
+        </div>
+      </div>
       {/* Company Info Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 -mt-20 md:-mt-32">
         <div className="bg-[#252525] rounded-xl p-6 shadow-lg">
