@@ -51,27 +51,27 @@ export default function CompanyItem({ company }: CompanyItemProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1C1C1C]"></div>
 
         <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-6">
-          <Breadcrumb className="text-white">
+          <Breadcrumb className="text-white text-sm md:text-base">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Головна</BreadcrumbLink>
+                <BreadcrumbLink href="/" style={{ fontSize: '12px' }}>Головна</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator >
                 <Slash />
               </BreadcrumbSeparator>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/companies">Компанії</BreadcrumbLink>
+                <BreadcrumbLink href="/companies" style={{ fontSize: '12px' }}>Компанії</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator >
                 <Slash />
               </BreadcrumbSeparator>
               <BreadcrumbItem>
-                <BreadcrumbLink className='text-accent' href="#">{company.name}</BreadcrumbLink>
+                <BreadcrumbLink className='text-accent' href="#" style={{ fontSize: '12px' }}>{company.name}</BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
-            <h2 className=" md:text-2xl font-bold text-white mt-2">
+            <h3 className=" md:text-2xl font-bold text-white mt-2">
               Карточка-превью Компанії
-            </h2 >
+            </h3 >
           </Breadcrumb>
 
           <div>

@@ -233,11 +233,10 @@ export default function EditCompanyPage({ params }: EditPageProps) {
   }
 
   return (
-    // <div className="min-h-screen bg-[#1C1C1C]">
-    //   <div className="mx-auto px-4 sm:px-6 lg:px-8">
-      
-        <CompanyEditForm params={{ id }} />
-    //   </div>
-    // </div>
+  <div>
+
+    <CompanyEditForm params={{ id }} />
+  </div>
+  
   )
 }
