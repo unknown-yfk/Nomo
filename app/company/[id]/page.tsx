@@ -356,6 +356,45 @@ async function getCompanyData(id: string): Promise<Company | null> {
       },
       isActive: true,
     },
+
+    '2': {
+      id: '2',
+      name: 'Hyatt Regency',
+      logoUrl: '/cashback/item.svg',
+      bannerUrl: '/company/image.png',
+      description: 'Hyatt Regency - це готель класу люкс, який пропонує високоякісні послуги та комфортне проживання. Наші номери обладнані всім необхідним для вашого комфортного перебування.',
+      advantages: [
+        { icon: 'clock', text: 'Послуги 24/7' },
+        { icon: 'shield', text: 'Захищеність з оплати' },
+        { icon: 'map', text: 'Зручність доступу та бар' },
+        { icon: 'spa', text: 'Spa & Оздоровлення' },
+      ],
+      contacts: {
+        address: 'вулиці Володимирська, 24, Київ',
+        phone: '+380661234567',
+        email: 'kyiv@hyatt.com',
+      },
+      isActive: true,
+    },
+    '3': {
+      id: '3',
+      name: 'Hyatt Regency',
+      logoUrl: '/cashback/item.svg',
+      bannerUrl: '/company/image.png',
+      description: 'Hyatt Regency - це готель класу люкс, який пропонує високоякісні послуги та комфортне проживання. Наші номери обладнані всім необхідним для вашого комфортного перебування.',
+      advantages: [
+        { icon: 'clock', text: 'Послуги 24/7' },
+        { icon: 'shield', text: 'Захищеність з оплати' },
+        { icon: 'map', text: 'Зручність доступу та бар' },
+        { icon: 'spa', text: 'Spa & Оздоровлення' },
+      ],
+      contacts: {
+        address: 'вулиці Володимирська, 24, Київ',
+        phone: '+380661234567',
+        email: 'kyiv@hyatt.com',
+      },
+      isActive: true,
+    },
     // ... (other company data entries)
   }
 
