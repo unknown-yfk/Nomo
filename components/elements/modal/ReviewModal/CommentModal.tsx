@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Star } from 'lucide-react'
+import { Image, Star, User } from 'lucide-react'
 import { motion } from 'framer-motion'
 import {
     Tooltip,
@@ -12,6 +12,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 interface CommentModalProps {
     isOpen: boolean
@@ -49,9 +50,23 @@ export function CommentModal({ isOpen, onClose, onSubmit }: CommentModalProps) {
         >
             <div className="bg-white rounded-xl sm:p-5 max-w-xl sm:max-w-2xl w-full mx-2 sm:mx-4 relative">
 
+
+                <div className="flex flex-col items-center mb-6">
+                    <div className="w-18 h-18 rounded-full overflow-hidden mb-2">
+
+                        <Avatar className="w-16 h-16 mb-2">
+                            <AvatarImage src="/we/user1.svg" alt="User profile" />
+                            <AvatarFallback>JD</AvatarFallback>
+                        </Avatar>
+                    </div>
+                    <span className="text-lg font-bold text-gray-800 ">Robert Fox
+
+</span>
+                </div>
                 <form onSubmit={handleSubmit} className="space-y-6 p-3">
                     <div className="relative w-full min-h-[200px] bg-gray-100 border-gray-300 rounded-lg shadow-inner focus-within:border-orange-500 focus-within:ring focus-within:ring-orange-200 focus-within:ring-opacity-50">
                         {/* Textarea with no border, outline, or ring */}
+
                         <Textarea
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
