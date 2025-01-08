@@ -401,7 +401,19 @@ import { PortfolioHeader } from "./PortfolioItems/PortfolioHeader";
 import { LeftPanel } from "./PortfolioItems/Panels/LeftPanel";
 import { RightPanel } from "./PortfolioItems/Panels/RightPanel";
 
-export default function HomePage() {
+import { User } from '@supabase/supabase-js'
+import { UserProfile } from '@/types/database'
+
+
+interface HomePageContentProps {
+  session: {
+    user: User
+  }
+  profile: UserProfile
+}
+
+  export default function Settings({ session, profile }: HomePageContentProps) {
+
   return (
     <div className="bg-[#0F0F0F] min-h-screen text-white p-2">
       <PortfolioHeader />

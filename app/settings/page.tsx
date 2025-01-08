@@ -1,13 +1,6 @@
-// import Portfolio from "@/components/elements/portfolio/Portfolio";
-
-// export default function page() {
-//     return <Portfolio />
-// }
-
-
 import BrandLogo from '@/components/elements/auth/brandlogo'
 import Dashboard from '@/components/elements/dashboard/Dashboard'
-import HomePage from '@/components/elements/portfolio/Portfolio'
+import Settings from '@/components/elements/settings/Settings'
 import { getUserProfile } from '@/lib/database'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
@@ -43,7 +36,7 @@ export default async function DashboardPage() {
 
         return (
             <div className='min-h-screen bg-[#0f0f0f] text-white'>
-                <HomePage session={session} profile={profile} />
+                <Settings session={session} profile={profile} />
             </div>
         )
     } catch (error) {
@@ -55,3 +48,7 @@ export default async function DashboardPage() {
         )
     }
 }
+
+
+
+
