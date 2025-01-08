@@ -61,7 +61,7 @@ export function CommentModal({ isOpen, onClose, onSubmit }: CommentModalProps) {
                     </div>
                     <span className="text-lg font-bold text-gray-800 ">Robert Fox
 
-</span>
+                    </span>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-6 p-3">
                     <div className="relative w-full min-h-[200px] bg-gray-100 border-gray-300 rounded-lg shadow-inner focus-within:border-orange-500 focus-within:ring focus-within:ring-orange-200 focus-within:ring-opacity-50">

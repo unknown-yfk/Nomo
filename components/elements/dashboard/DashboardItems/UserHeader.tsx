@@ -65,11 +65,11 @@ export default function UserHeader({ user, profile }: UserHeaderProps) {
 			<div className='flex flex-col items-center lg:items-start gap-4 lg:gap-6 lg:mr-[21px]'>
 				<div className='flex items-center gap-2 lg:gap-4'>
 					{/* <Briefcase className='text-accent w-5 h-5 lg:w-6 lg:h-6 cursor-pointer hover:text-white transition-colors' /> */}
-					
-          <Link href="/portfolio" passHref>
-			<Briefcase className="text-accent w-5 h-5 lg:w-6 lg:h-6 cursor-pointer hover:text-white transition-colors" />
-		</Link>
-          <div className='relative h-24 w-24 lg:h-[150px] lg:w-[150px]'>
+
+					<Link href="/portfolio" passHref>
+						<Briefcase className="text-accent w-5 h-5 lg:w-6 lg:h-6 cursor-pointer hover:text-white transition-colors" />
+					</Link>
+					<div className='relative h-24 w-24 lg:h-[150px] lg:w-[150px]'>
 						<Image
 							src={user.user_metadata.avatar_url || '/dashboard/user.svg'}
 							alt='Profile'
@@ -89,7 +89,7 @@ export default function UserHeader({ user, profile }: UserHeaderProps) {
 			<div className='w-full lg:w-auto mb-6 lg:mb-0'>
 				<NavigationCards userProfile={profile} />
 			</div>
-			
+
 			<div className='w-full lg:w-auto flex justify-center lg:justify-end'>
 				<CardPreview cardHolder={profile?.full_name} />
 			</div>
