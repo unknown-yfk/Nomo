@@ -30,6 +30,13 @@ const handleNavigateToNInwest = () => {
   const handleNavigateToNRefer = () => {
     router.push('/refer') // Replace '/n-inwest' with your desired route
   }
+
+	
+  const handleNavigateToNUB = () => {
+    router.push('/balance') // Replace '/n-inwest' with your desired route
+  }
+
+
 	const [isSettingsOpen, setIsSettingsOpen] = useState(false)
 	const isAdmin = userProfile?.role === 'admin'
 
@@ -84,6 +91,7 @@ const handleNavigateToNInwest = () => {
 					<Card
 						className='flex items-center justify-center p-4 bg-[#1E2128] border-none hover:bg-gray-800/50 transition-colors cursor-pointer rounded-[16px]'
 						style={{ width: '100%', height: '100px', minHeight: '100px' }}
+						onClick={handleNavigateToNUB}
 					>
 						<h3 className='font-medium text-gray-200 text-sm sm:text-base'>Баланс</h3>
 					</Card>
