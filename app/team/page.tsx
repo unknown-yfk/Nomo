@@ -267,7 +267,7 @@ export default function TeamPage() {
           </div>
         </div>
 
-        {/* Leaders Section */}
+        {/* Leaders Section d */}
         <div className="space-y-12 mb-20">
           <h1 className="text-3xl font-bold text-center text-white">Наші лідери</h1>
           <div className="space-y-12">
