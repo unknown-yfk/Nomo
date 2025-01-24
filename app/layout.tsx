@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
 import Head from 'next/head'
 import ConditionalHeader from '@/components/layout/ConditionalHeader'
+import ConditionalFooter from '@/components/layout/ConditionalFooter'
 
 const inter = Inter({
 	subsets: ['cyrillic'],
@@ -34,7 +34,7 @@ export default function RootLayout({
 				<ConditionalHeader />
 
 				{children}
-				<Footer />
+				<ConditionalFooter />
 			</body>
 		</html>
 	)
