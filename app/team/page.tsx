@@ -19,53 +19,53 @@ const leaders = [
     role: "Старший віце-президент",
     description:
       "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-      image: "/team/av2.png",
-    },
+    image: "/team/av2.png",
+  },
   {
     name: "Дейн Кнехт",
     role: "Старший віце-президент",
     description:
       "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-      image: "/team/av3.png",
-    },
+    image: "/team/av3.png",
+  },
 
 
 
-    {
-      name: "Дейн Кнехт",
-      role: "Старший віце-президент",
-      description:
-        "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-        image: "/team/av4.png",
-      },
-      {
-        name: "Дейн Кнехт",
-        role: "Старший віце-президент",
-        description:
-          "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-          image: "/team/av5.png",
-        },
-        {
-          name: "Дейн Кнехт",
-          role: "Старший віце-президент",
-          description:
-            "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-            image: "/team/av6.png",
-          },
-          {
-            name: "Дейн Кнехт",
-            role: "Старший віце-президент",
-            description:
-              "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-              image: "/team/av7.png",
-            },
-            {
-              name: "Дейн Кнехт",
-              role: "Старший віце-президент",
-              description:
-                "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
-                image: "/team/av8.png",
-              },
+  {
+    name: "Дейн Кнехт",
+    role: "Старший віце-президент",
+    description:
+      "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
+    image: "/team/av4.png",
+  },
+  {
+    name: "Дейн Кнехт",
+    role: "Старший віце-президент",
+    description:
+      "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
+    image: "/team/av5.png",
+  },
+  {
+    name: "Дейн Кнехт",
+    role: "Старший віце-президент",
+    description:
+      "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
+    image: "/team/av6.png",
+  },
+  {
+    name: "Дейн Кнехт",
+    role: "Старший віце-президент",
+    description:
+      "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
+    image: "/team/av7.png",
+  },
+  {
+    name: "Дейн Кнехт",
+    role: "Старший віце-президент",
+    description:
+      "«Історія завжди була критично важливим для навчання у Block N - саме ще та пристрасть, які нові практики, допоможуть нам навчитися мислити по-новому, щоб досягти більших цілей. Реалізація проектів - це не тільки процес бачити, як наші стандарт продовжують розвиватися у своїй карєрі, але й бачити, як багато ми можемо з ми навчатись».",
+    image: "/team/av8.png",
+  },
 ]
 
 const departments = [
@@ -75,14 +75,14 @@ const departments = [
     description:
       "Відділ операційної діяльності - це підрозділ організації, що займається управлінням та оптимізацією щоденних операційних процесів компанії.",
     members: [
-      { name: "Марія", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Джастін", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Лі", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Меган", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Марія", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Джастін", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Лі", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Меган", image: "/placeholder.svg?height=200&width=200" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
     ],
   },
   {
@@ -91,21 +91,167 @@ const departments = [
     description:
       "Відділ продажів - відповідає за продаж товарів або послуг, пошук нових клієнтів, підтримку зв'язків з існуючими клієнтами та виконання планів продажу.",
     members: [
-      { name: "Марія", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Джастін", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Лі", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Меган", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Марія", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Джастін", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Лі", image: "/placeholder.svg?height=200&width=200" },
-      { name: "Меган", image: "/placeholder.svg?height=200&width=200" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+
+
+  {
+    id: "Manage",
+    name: "Відділ маркетингу",
+    description:
+      "Відділ маркетингу – займається розробкою та реалізацією маркетингових стратегій, рекламою, дослідженнями ринку, брендингом та залученням клієнтів.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+  {
+    id: "IT",
+    name: "Відділ ІТ",
+    description:
+      "Відділ ІТ – відповідає за управління інформаційними технологіями, підтримку та розвиток програмного забезпечення, захист даних, мережеву інфраструктуру та технічну підтримку співробітників.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+
+
+  {
+    id: "tec",
+    name: "Відділ юриспруденції",
+    description:
+      "Відділ юриспруденції – відповідає за правову підтримку компанії, складання договорів, захист інтересів організації в судових справах та консультації з юридичних питань.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+
+
+
+  {
+    id: "sales2",
+    name: "Відділ фінансів",
+    description:
+      "Відділ фінансів – займається управлінням фінансами компанії, складанням бюджету, фінансовим плануванням, аналізом витрат і доходів, а також звітністю.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+  {
+    id: "new1",
+    name: "Відділ дизайну",
+    description:
+      "Відділ дизайну — це підрозділ, що відповідає за створення та розробку візуальних матеріалів для бренду або продукту компанії.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+
+
+
+  {
+    id: "new2",
+    name: "Відділ франчайзі",
+    description:
+      "Відділ франчайзі – це підрозділ компанії, який займається управлінням та підтримкою франчайзингової мережі.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+    ],
+  },
+
+
+
+
+
+
+
+  {
+    id: "new3",
+    name: "Відділ франчайзі",
+    description:
+      "Відділ франчайзі – це підрозділ компанії, який займається управлінням та підтримкою франчайзингової мережі.",
+    members: [
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
+      { name: "Марія", image: "/team/operations/image1.png" },
+      { name: "Джастін", image: "/team/operations/image2.png" },
+      { name: "Лі", image: "/team/operations/image3.png" },
+      { name: "Меган", image: "/team/operations/image4.png" },
     ],
   },
 ]
 
 export default function TeamPage() {
   return (
-    <div className="min-h-screen bg-[#1c1d20] p-10">
+    <div className="min-h-screen bg-[#0f0f0f] p-10">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
@@ -123,7 +269,7 @@ export default function TeamPage() {
 
         {/* Leaders Section */}
         <div className="space-y-12 mb-20">
-          <h2 className="text-2xl font-medium text-white">Наші лідери</h2>
+          <h1 className="text-3xl font-bold text-center text-white">Наші лідери</h1>
           <div className="space-y-12">
             {leaders.map((leader, index) => (
               <Card key={index} className="bg-transparent border-none">
