@@ -32,8 +32,8 @@ const popularItems = [
     { id: "3321", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
     { id: "3322", image: "/main/ss.jpg", product: "Phone with long...", price: "$150.50", total: "$469.89" },
     { id: "3323", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-    { id: "3324",  image: "/main/ss.jpg",product: "Phone 123", price: "$150.50", total: "$469.89" },
-    { id: "3325",  image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+    { id: "3324", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+    { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
 ]
 
 const metrics = [
@@ -66,7 +66,11 @@ export function MainContents() {
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Всього замовлень</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
-                            <UserCircle className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
+                            <img
+                                src="/business/ico2.png"
+                                alt="Icon"
+                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                            />
                         </CardContent>
                     </Card>
 
@@ -76,7 +80,11 @@ export function MainContents() {
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Обсяг продажів</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
-                            <BarChart2 className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
+                            <img
+                                src="/business/icon1.png"
+                                alt="Icon"
+                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                            />
                         </CardContent>
                     </Card>
                     <Card className="bg-[var(--background)] text-[var(--foreground)]">
@@ -85,7 +93,12 @@ export function MainContents() {
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Кількість клієнтів</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
-                            <Users className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
+
+                            <img
+                                src="/business/ico3.png"
+                                alt="Icon"
+                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                            />
                         </CardContent>
                     </Card>
                     <Card className="bg-[var(--background)] text-[var(--foreground)]">
@@ -94,7 +107,12 @@ export function MainContents() {
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Охоплений ринці</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
-                            <PieChart className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />
+
+                            <img
+                                src="/business/ico4.png"
+                                alt="Icon"
+                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                            />
                         </CardContent>
                     </Card>
                 </div>
