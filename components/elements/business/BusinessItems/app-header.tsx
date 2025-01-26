@@ -1,4 +1,4 @@
-import { Bell, Search, Settings } from "lucide-react"
+import { Bell, Search, Settings, Settings2, SettingsIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -20,13 +20,17 @@ export function AppHeader() {
       <div className="ml-auto flex items-center gap-4">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input placeholder="Пошук..." className="pl-8 bg-background/95 border-muted w-[200px] lg:w-[300px]" />
-        </div>
+          <Input placeholder="Пошук..." className="pl-8 bg-black border border-gray w-[200px] lg:w-[300px]" />
+          </div>
+          <Button variant="ghost" size="icon" className="relative">
+          <SettingsIcon className="h-5 w-5 text-white" />
+          <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-orange-500 rounded-full" />
+        </Button>
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5 text-white" />
           <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-orange-500 rounded-full" />
         </Button>
-        <DropdownMenu>
+        {/* <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-8 w-8 rounded-full">
               <Avatar className="h-8 w-8">
@@ -49,7 +53,7 @@ export function AppHeader() {
             <DropdownMenuSeparator />
             <DropdownMenuItem>Log out</DropdownMenuItem>
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu> */}
       </div>
     </header>
   )
