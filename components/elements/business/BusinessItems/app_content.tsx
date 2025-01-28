@@ -119,7 +119,7 @@ export function MainContents() {
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
                             <img
-                                src="/business/ico2.png"
+                                src="/business/save-money-finance-business-svgrepo-com.svg"
                                 alt="Icon"
                                 className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
                             />
@@ -133,7 +133,7 @@ export function MainContents() {
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
                             </div>
                             <img
-                                src="/business/icon1.png"
+                                src="/business/dollar-tag-finance-business-svgrepo-com.svg"
                                 alt="Icon"
                                 className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
                             />
@@ -147,7 +147,7 @@ export function MainContents() {
                             </div>
 
                             <img
-                                src="/business/ico3.png"
+                                src="/business/structure-organization-finance-svgrepo-com.svg"
                                 alt="Icon"
                                 className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
                             />
@@ -161,7 +161,7 @@ export function MainContents() {
                             </div>
 
                             <img
-                                src="/business/ico4.png"
+                                src="/business/money-bag-finance-business-svgrepo-com.svg"
                                 alt="Icon"
                                 className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
                             />
@@ -177,17 +177,28 @@ export function MainContents() {
                                     <h3 className="text-lg text-white">Аналітика продажів</h3>
                                     <div className="flex flex-wrap gap-4 sm:gap-12">
                                         {metrics.map((metric, index) => (
-                                            <div key={index} className="space-y-1">
-                                                <p className="text-sm text-gray-500">{metric.label}</p>
-                                                <p className="text-lg font-medium text-white">{metric.amount}</p>
+
+
+                                            <div key={index} className="space-x-4 flex items-center">
+                                                <div>
+                                                    <p className="text-sm text-gray-500">{metric.label}</p>
+                                                    <p className="text-lg font-medium text-white">{metric.amount}</p>
+                                                </div>
+
                                                 <div
-                                                    className={`flex items-center gap-1 text-xs ${metric.isPositive ? "text-green-500" : "text-red-500"
+                                                    className={`flex items-center gap-1 text-xs px-2 py-1 rounded ${metric.isPositive ? "text-green-500 bg-green-900" : "text-red-500 bg-red-900"
                                                         }`}
                                                 >
-                                                    {metric.isPositive ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />}
+                                                    {metric.isPositive ? (
+                                                        <ArrowUp className="h-3 w-3" />
+                                                    ) : (
+                                                        <ArrowDown className="h-3 w-3" />
+                                                    )}
                                                     <span>{`${metric.isPositive ? "+" : "-"}${metric.change}%`}</span>
                                                 </div>
+
                                             </div>
+
                                         ))}
                                     </div>
                                 </div>
@@ -229,34 +240,36 @@ export function MainContents() {
                     </CardContent>
                 </Card>
 
-                <div className="grid gap-5 md:grid-cols-[auto,1fr]  ">
-                    <Card className="bg-[#1c1d1f] text-[var(--foreground)] border-none shadow-none rounded-lg">
 
-                        <CardContent className="p-0 h-full ">
-                            <Table>
+
+                <div className="grid gap-5 md:grid-cols-[auto,1fr]">
+                    <Card className="bg-[#1c1d1f] text-[var(--foreground)] border-none shadow-none rounded-lg">
+                        <CardContent className="p-0 h-full rounded-lg">
+                            <Table className="rounded-lg overflow-hidden">
                                 <TableHeader>
-                                    <TableRow className="bg-[#1c1d1f] ">
+                                    <TableRow className="bg-[#1c1d1f]">
                                         <TableHead>Останні операції</TableHead>
                                         <TableHead className="text-right">•••</TableHead>
-
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody className="bg-[#1c1d1f]">
                                     {transactions.map((transaction) => (
-                                        <TableRow key={transaction.id}> 
+                                        <TableRow key={transaction.id}>
                                             <TableCell className="font-medium">
                                                 <div className="flex items-center gap-3">
                                                     <img
                                                         src={transaction.image}
                                                         alt={transaction.product}
-                                                        className="h-10 w-10 rounded-lg bg-gray-800" />
+                                                        className="h-10 w-10 rounded-lg bg-gray-800"
+                                                    />
                                                     <span className="whitespace-nowrap text-ellipsis max-w-[150px]">
                                                         {transaction.product}
                                                     </span>
-
                                                 </div>
                                             </TableCell>
-                                            <TableCell className="text-right whitespace-nowrap">{transaction.total}</TableCell>
+                                            <TableCell className="text-right whitespace-nowrap">
+                                                {transaction.total}
+                                            </TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
@@ -264,27 +277,33 @@ export function MainContents() {
                         </CardContent>
                     </Card>
 
-                 
                     <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
-                        <CardContent className="p-0 h-full">
+                        <CardContent className="p-0 h-full rounded-lg">
                             <div className="flex justify-between items-center px-4 py-2">
                                 <h2 className="text-lg font-bold">Найпопулярніші позиції</h2>
-                                <a href="#" className="text-sm text-gray-400 hover:underline">View all</a>
+                                <a href="#" className="text-sm text-gray-400 hover:underline">
+                                    View all
+                                </a>
                             </div>
-                            <Table className="w-full">
+                            <Table className="w-full rounded-lg overflow-hidden">
                                 <TableHeader>
                                     <TableRow>
                                         <TableHead className="w-[300px]">Назва товару</TableHead>
                                         <TableHead className="text-right hidden sm:table-cell">Ціна</TableHead>
-                                        <TableHead className="text-right hidden md:table-cell">Продано</TableHead>
+                                        <TableHead className="text-right hidden md:table-cell">
+                                            Продано
+                                        </TableHead>
                                         <TableHead className="text-right">Прибуток</TableHead>
                                         <TableHead className="w-[50px]"></TableHead>
                                     </TableRow>
                                 </TableHeader>
-                                <TableBody >
+                                <TableBody>
                                     {popularItems.map((item) => (
-                                        <TableRow  key={item.id} className="bg-[#1c1d1f]   hover:bg-[#1c1d1f]">
-                                            <TableCell className="font-medium  ">
+                                        <TableRow
+                                            key={item.id}
+                                            className="bg-[#1c1d1f] hover:bg-[#1c1d1f]"
+                                        >
+                                            <TableCell className="font-medium">
                                                 <div className="flex items-center gap-3">
                                                     <img
                                                         src={item.image}
@@ -297,8 +316,12 @@ export function MainContents() {
                                                     </div>
                                                 </div>
                                             </TableCell>
-                                            <TableCell className="text-right hidden sm:table-cell">{item.price}</TableCell>
-                                            <TableCell className="text-right hidden md:table-cell">{item.sold}</TableCell>
+                                            <TableCell className="text-right hidden sm:table-cell">
+                                                {item.price}
+                                            </TableCell>
+                                            <TableCell className="text-right hidden md:table-cell">
+                                                {item.sold}
+                                            </TableCell>
                                             <TableCell className="text-right">{item.profit}</TableCell>
                                             <TableCell className="text-center text-gray-500">•••</TableCell>
                                         </TableRow>
@@ -307,8 +330,8 @@ export function MainContents() {
                             </Table>
                         </CardContent>
                     </Card>
-
                 </div>
+
             </div>
 
         </div>

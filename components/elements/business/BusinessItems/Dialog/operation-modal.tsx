@@ -34,6 +34,7 @@ export function OperationModal({ isOpen, onOpenChange }: OperationModalProps) {
     <>
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
+     
           <DialogHeader>
             <DialogTitle className="text-2xl font-normal">Проведення операції</DialogTitle>
           </DialogHeader>
