@@ -21,7 +21,8 @@ export function AppHeader() {
       <div className="ml-auto flex items-center gap-4">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input placeholder="Пошук..." className="pl-8 bg-[#121315] border border-gray w-[200px] lg:w-[300px]" />
+          <Input placeholder="Пошук..." className="pl-8 bg-[#121315] border-gray w-[200px] lg:w-[300px] rounded-lg" />
+
           </div>
           <Button variant="ghost" size="icon" className="relative">
           <SettingsIcon className="h-5 w-5 text-white" />
@@ -31,30 +32,7 @@ export function AppHeader() {
           <Bell className="h-5 w-5 text-white" />
           <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-[#FF8D2A] rounded-full" />
         </Button>
-        {/* <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-              <Avatar className="h-8 w-8">
-                <AvatarImage src="/avatars/01.png" alt="@user" />
-                <AvatarFallback className="text-gray-800">U</AvatarFallback>
-              </Avatar>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56" align="end" forceMount>
-            <DropdownMenuLabel className="font-normal">
-              <div className="flex flex-col space-y-1">
-                <p className="text-sm font-medium leading-none">Partner</p>
-                <p className="text-xs leading-none text-muted-foreground">partner@gmail.com</p>
-              </div>
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Log out</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu> */}
+      
       </div>
     </header>
   )

@@ -104,8 +104,8 @@ export function MainContents() {
         <div className="content" style={{ backgroundColor: colors.background, color: colors.foreground }}>
 
             <div className="space-y-8">
-                <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
+                <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+                    <Card className="bg-[#121315] text-[var(--foreground)]  border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4 sm:p-6">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Всього замовлень</p>
