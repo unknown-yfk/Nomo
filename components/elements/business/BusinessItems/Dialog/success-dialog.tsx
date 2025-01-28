@@ -13,7 +13,7 @@ interface SuccessDialogProps {
 export function SuccessDialog({ isOpen, onOpenChange }: SuccessDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] border-none bg-[#121315] text-white">
+      <DialogContent style={{ borderRadius: 15 }} className="sm:max-w-[425px] border-none bg-[#121315] text-white">
         <DialogHeader>
           <VisuallyHidden>
             <DialogTitle>Операція успішна</DialogTitle>

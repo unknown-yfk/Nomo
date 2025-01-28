@@ -28,13 +28,6 @@ const transactions = [
     { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
 ]
 
-// const popularItems = [
-//     { id: "3321", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-//     { id: "3322", image: "/main/ss.jpg", product: "Phone with long...", price: "$150.50", total: "$469.89" },
-//     { id: "3323", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-//     { id: "3324", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-//     { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-// ]
 const popularItems = [
     {
         id: "product_code",

@@ -32,16 +32,17 @@ export function OperationModal({ isOpen, onOpenChange }: OperationModalProps) {
 
   return (
     <>
-      <Dialog open={isOpen} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
+      <Dialog open={isOpen} onOpenChange={onOpenChange} >
+        <DialogContent style={{ borderRadius: 15 }} className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
      
           <DialogHeader>
-            <DialogTitle className="text-2xl font-normal">Проведення операції</DialogTitle>
+            <DialogTitle className="text-2xl font-normal text-center">Проведення операції</DialogTitle>
           </DialogHeader>
-          <div className="grid gap-6 py-6">
+          <div className="grid gap-6 py-4">
             <div className="space-y-2">
               <Label className="text-sm text-gray-400">Назва компанії</Label>
               <div className="text-white">ТОВ&nbsp;&quot;Прикладінвест&quot;</div>
+              
             </div>
             <div className="space-y-2">
               <Label className="text-sm text-gray-400">Касир</Label>

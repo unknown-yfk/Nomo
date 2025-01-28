@@ -22,14 +22,14 @@ export function ConfirmationDialog({ isOpen, onOpenChange, data }: ConfirmationD
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
+        <DialogContent style={{ borderRadius: 15 }} className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-normal">Підтвердження</DialogTitle>
+            <DialogTitle className="text-2xl font-normal text-center">Підтвердження</DialogTitle>
           </DialogHeader>
           <div className="grid gap-6 py-6">
             <div className="space-y-2">
               <Label className="text-sm text-gray-400">Назва компанії</Label>
-              <div className="text-white">{data.company}</div>
+              <div className="text-white">Прикладінвест</div>
             </div>
             <div className="space-y-2">
               <Label className="text-sm text-gray-400">Касир</Label>

@@ -16,9 +16,9 @@ export function QRScannerDialog({ isOpen, onOpenChange }: QRScannerDialogProps) 
   return (
     <>
       <Dialog open={isOpen && !showSuccess} onOpenChange={onOpenChange}>
-        <DialogContent className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
+        <DialogContent style={{ borderRadius: 15 }} className="sm:max-w-[425px] border-none rounded-sm bg-[#121315] text-white">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-normal">Просканyйте QR-код</DialogTitle>
+            <DialogTitle className="text-2xl font-normal text-center">Просканyйте QR-код</DialogTitle>
           </DialogHeader>
           <div className="grid gap-6 py-6">
             <div className="w-full aspect-[4/3] bg-[#1c1d21] rounded-lg relative">{/* QR Scanner View */}</div>
