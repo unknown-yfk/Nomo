@@ -15,12 +15,13 @@ import { SidebarTrigger } from "@/components/ui/sidebar"
 
 export function AppHeader() {
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b border-border bg-background/95 px-6 backdrop-blur">
+    
+    <header className="sticky top-0 z-10 flex h-16 border-none shadow-none rounded-lg items-center gap-4 border-b border-border bg-[#121315] px-6 backdrop-blur">
       <SidebarTrigger className="bg-orange-500 text-white" />
       <div className="ml-auto flex items-center gap-4">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input placeholder="Пошук..." className="pl-8 bg-black border border-gray w-[200px] lg:w-[300px]" />
+          <Input placeholder="Пошук..." className="pl-8 bg-[#121315] border border-gray w-[200px] lg:w-[300px]" />
           </div>
           <Button variant="ghost" size="icon" className="relative">
           <SettingsIcon className="h-5 w-5 text-white" />

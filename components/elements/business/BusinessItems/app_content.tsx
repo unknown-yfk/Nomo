@@ -28,13 +28,65 @@ const transactions = [
     { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
 ]
 
+// const popularItems = [
+//     { id: "3321", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+//     { id: "3322", image: "/main/ss.jpg", product: "Phone with long...", price: "$150.50", total: "$469.89" },
+//     { id: "3323", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+//     { id: "3324", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+//     { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
+// ]
 const popularItems = [
-    { id: "3321", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-    { id: "3322", image: "/main/ss.jpg", product: "Phone with long...", price: "$150.50", total: "$469.89" },
-    { id: "3323", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-    { id: "3324", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-    { id: "3325", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
-]
+    {
+        id: "product_code",
+        image: "/main/ss.jpg",
+        product: "Phone 123",
+        code: "product_code",
+        price: "$150.50",
+        sold: 3321,
+        profit: "$499,810.50",
+        total: "$469.89",
+    },
+    {
+        id: "w2r12fh",
+        image: "/main/ss.jpg",
+        product: "Phone with long name...",
+        code: "w2r12fh",
+        price: "$150.50",
+        sold: 3321,
+        profit: "$499,810.50",
+        total: "$469.89",
+    },
+    {
+        id: "k6m39hm",
+        image: "/main/ss.jpg",
+        product: "Phone 123",
+        code: "k6m39hm",
+        price: "$150.50",
+        sold: 3321,
+        profit: "$499,810.50",
+        total: "$469.89",
+    },
+    {
+        id: "m36b4d6",
+        image: "/main/ss.jpg",
+        product: "Phone 123",
+        code: "m36b4d6",
+        price: "$150.50",
+        sold: 3321,
+        profit: "$499,810.50",
+        total: "$469.89",
+    },
+    {
+        id: "n47b2t8",
+        image: "/main/ss.jpg",
+        product: "Phone 123",
+        code: "n47b2t8",
+        price: "$150.50",
+        sold: 3321,
+        profit: "$499,810.50",
+        total: "$469.89",
+    },
+];
 
 const metrics = [
     { label: "Баланс", amount: "$32,123.00", change: 2.2, isPositive: true },
@@ -60,7 +112,7 @@ export function MainContents() {
 
             <div className="space-y-8">
                 <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                    <Card className="bg-[var(--background)] text-[var(--foreground)]">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4 sm:p-6">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Всього замовлень</p>
@@ -74,7 +126,7 @@ export function MainContents() {
                         </CardContent>
                     </Card>
 
-                    <Card className="bg-[var(--background)] text-[var(--foreground)]">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4 sm:p-6">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Обсяг продажів</p>
@@ -87,7 +139,7 @@ export function MainContents() {
                             />
                         </CardContent>
                     </Card>
-                    <Card className="bg-[var(--background)] text-[var(--foreground)]">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4 sm:p-6">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Кількість клієнтів</p>
@@ -101,7 +153,7 @@ export function MainContents() {
                             />
                         </CardContent>
                     </Card>
-                    <Card className="bg-[var(--background)] text-[var(--foreground)]">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4 sm:p-6">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Охоплений ринці</p>
@@ -117,7 +169,7 @@ export function MainContents() {
                     </Card>
                 </div>
 
-                <Card className="bg-[var(--background)] text-[var(--foreground)]">
+                <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                     <CardContent className="p-4 sm:p-6">
                         <div className="space-y-6">
                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -143,7 +195,7 @@ export function MainContents() {
                                     <SelectTrigger className="w-full sm:w-[180px] bg-transparent border-gray-700 text-gray-500">
                                         <SelectValue placeholder="Select timeframe" />
                                     </SelectTrigger>
-                                    <SelectContent className="bg-[#1c1d20] border-gray-700 text-white">
+                                    <SelectContent className="bg-[#1c1d20]  text-white">
                                         <SelectItem value="day">День</SelectItem>
                                         <SelectItem value="week">Тиждень</SelectItem>
                                         <SelectItem value="month">Місяць</SelectItem>
@@ -177,20 +229,21 @@ export function MainContents() {
                     </CardContent>
                 </Card>
 
-                <div className="grid gap-4 md:grid-cols-[auto,1fr]">
-                    <Card className="h-[400px] w-full md:w-auto bg-[var(--background)] text-[var(--foreground)]">
+                <div className="grid gap-5 md:grid-cols-[auto,1fr]  ">
+                    <Card className="bg-[#1c1d1f] text-[var(--foreground)] border-none shadow-none rounded-lg">
 
                         <CardContent className="p-0 h-full ">
                             <Table>
                                 <TableHeader>
-                                    <TableRow>
+                                    <TableRow className="bg-[#1c1d1f] ">
                                         <TableHead>Останні операції</TableHead>
-                                        <TableHead className="text-right">Всього</TableHead>
+                                        <TableHead className="text-right">•••</TableHead>
+
                                     </TableRow>
                                 </TableHeader>
-                                <TableBody>
+                                <TableBody className="bg-[#1c1d1f]">
                                     {transactions.map((transaction) => (
-                                        <TableRow key={transaction.id}>
+                                        <TableRow key={transaction.id}> 
                                             <TableCell className="font-medium">
                                                 <div className="flex items-center gap-3">
                                                     <img
@@ -211,41 +264,50 @@ export function MainContents() {
                         </CardContent>
                     </Card>
 
-                    <Card className="h-[400px] w-full bg-[var(--background)] text-[var(--foreground)] ">
+                 
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="p-0 h-full">
-                            <Table>
+                            <div className="flex justify-between items-center px-4 py-2">
+                                <h2 className="text-lg font-bold">Найпопулярніші позиції</h2>
+                                <a href="#" className="text-sm text-gray-400 hover:underline">View all</a>
+                            </div>
+                            <Table className="w-full">
                                 <TableHeader>
                                     <TableRow>
-                                        <TableHead className="w-[300px]">Найпопулярніші позиції</TableHead>
+                                        <TableHead className="w-[300px]">Назва товару</TableHead>
                                         <TableHead className="text-right hidden sm:table-cell">Ціна</TableHead>
-                                        <TableHead className="text-right hidden md:table-cell">ID</TableHead>
-                                        <TableHead className="text-right">Всього</TableHead>
+                                        <TableHead className="text-right hidden md:table-cell">Продано</TableHead>
+                                        <TableHead className="text-right">Прибуток</TableHead>
                                         <TableHead className="w-[50px]"></TableHead>
                                     </TableRow>
                                 </TableHeader>
-                                <TableBody>
+                                <TableBody >
                                     {popularItems.map((item) => (
-                                        <TableRow key={item.id}>
-                                            <TableCell className="font-medium">
+                                        <TableRow  key={item.id} className="bg-[#1c1d1f]   hover:bg-[#1c1d1f]">
+                                            <TableCell className="font-medium  ">
                                                 <div className="flex items-center gap-3">
                                                     <img
                                                         src={item.image}
                                                         alt={item.product}
-                                                        className="h-10 w-10 rounded-lg bg-gray-800" />
-                                                    {item.product}
-
+                                                        className="h-10 w-10 rounded-lg bg-gray-800"
+                                                    />
+                                                    <div>
+                                                        <p>{item.product}</p>
+                                                        <span className="text-sm text-gray-500">{item.code}</span>
+                                                    </div>
                                                 </div>
                                             </TableCell>
                                             <TableCell className="text-right hidden sm:table-cell">{item.price}</TableCell>
-                                            <TableCell className="text-right hidden md:table-cell">{item.id}</TableCell>
-                                            <TableCell className="text-right">{item.total}</TableCell>
-                                            <TableCell>•••</TableCell>
+                                            <TableCell className="text-right hidden md:table-cell">{item.sold}</TableCell>
+                                            <TableCell className="text-right">{item.profit}</TableCell>
+                                            <TableCell className="text-center text-gray-500">•••</TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
                             </Table>
                         </CardContent>
                     </Card>
+
                 </div>
             </div>
 
