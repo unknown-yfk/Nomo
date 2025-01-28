@@ -16,7 +16,7 @@ export default function DashboardLayout({
         <AppSidebar />
         <div className="flex flex-col flex-1 overflow-hidden">
           <AppHeader />
-          <main className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800 scrollbar-thumb-rounded-lg">
+          <main className="flex-1 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800 scrollbar-thumb-rounded-lg">
             {children}
           </main>
         </div>

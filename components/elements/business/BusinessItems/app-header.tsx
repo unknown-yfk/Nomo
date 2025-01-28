@@ -17,7 +17,7 @@ export function AppHeader() {
   return (
     
     <header className="sticky top-0 z-10 flex h-16 border-none shadow-none rounded-lg items-center gap-4 border-b border-border bg-[#121315] px-6 backdrop-blur">
-      <SidebarTrigger className="bg-orange-500 text-white" />
+      <SidebarTrigger className="bg-[#FF8D2A] text-white" />
       <div className="ml-auto flex items-center gap-4">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -25,11 +25,11 @@ export function AppHeader() {
           </div>
           <Button variant="ghost" size="icon" className="relative">
           <SettingsIcon className="h-5 w-5 text-white" />
-          <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-orange-500 rounded-full" />
+          <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-[#FF8D2A] rounded-full" />
         </Button>
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5 text-white" />
-          <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-orange-500 rounded-full" />
+          <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-[#FF8D2A] rounded-full" />
         </Button>
         {/* <DropdownMenu>
           <DropdownMenuTrigger asChild>

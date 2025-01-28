@@ -40,13 +40,13 @@ export function AppSidebar() {
       {/* Sidebar Header */}
       <SidebarHeader className="border-b border-border p-4 bg-[#121315]">
         <div className={`flex items-center gap-2 px-2 ${isCollapsed ? "justify-center" : ""}`}>
-          <div className="h-10 w-10 rounded-lg bg-orange-500 flex items-center justify-center flex-shrink-0">
+          <div className="h-10 w-10 rounded-lg bg-[#FF8D2A] flex items-center justify-center flex-shrink-0">
             <span className="text-white font-bold text-xl">N</span>
           </div>
           {!isCollapsed && (
             <div className="flex flex-col">
               <span className="text-lg font-semibold">Nomocash</span>
-              <span className="text-sm text-orange-500">Business</span>
+              <span className="text-sm text-[#FF8D2A]">Business</span>
             </div>
           )}
         </div>
@@ -61,7 +61,7 @@ export function AppSidebar() {
                 asChild
                 variant="ghost"
                 className={`w-full justify-start gap-2 p-3 rounded-lg ${
-                  pathname === item.path ? "text-orange-500 " : "hover:bg-orange-500"
+                  pathname === item.path ? "text-[#FF8D2A] " : "hover:bg-[#FF8D2A]"
                 } ${isCollapsed ? "justify-center" : ""}`}
               >
                 <Link href={item.path}>
@@ -80,13 +80,13 @@ export function AppSidebar() {
           <>
             <Button
               variant="default"
-              className="bg-orange-500 text-white w-full p-3 rounded-lg hover:bg-orange-600"
+              className="bg-[#FF8D2A] text-white w-full p-3  rounded-lg hover:bg-orange-600"
               onClick={() => setIsModalOpen(true)}
             >
               Скачувати
             </Button>
             <OperationModal isOpen={isModalOpen} onOpenChange={setIsModalOpen} />
-            <Button variant="default" className="bg-orange-500 text-white w-full p-3 rounded-lg hover:bg-orange-600">
+            <Button variant="default" className="bg-[#FF8D2A] text-white w-full p-3 rounded-lg hover:bg-orange-600">
               Дані
             </Button>
           </>
