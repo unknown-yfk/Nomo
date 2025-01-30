@@ -51,7 +51,7 @@ export function ProductsTable() {
         </Select>
       </div>
 
-      <div className="rounded-none border-x border-b border-gray-800 bg-[#1c1d20]">
+      <div className="rounded-none border-x border-b border-gray-800 bg-[#121315]">
         <Table>
           <TableHeader>
             <TableRow className="border-t border-gray-800 hover:bg-transparent">
@@ -82,7 +82,7 @@ export function ProductsTable() {
                 <TableCell className="py-2">
                    <Button
                      variant="ghost"
-                     className="bg-[#FF8D2A]  bg-opacity-60 text-orange-400 hover:bg-[#FF8D2A] hover:bg-opacity-90 rounded-sm h-6 px-3 text-xs font-normal"
+                     className="bg-[#FF8D2A]   bg-opacity-60 text-orange-400 hover:bg-[#FF8D2A] hover:bg-opacity-90 rounded-sm h-6 px-3 text-xs font-normal"
                      >
                      Складники
                      <ChevronRight />

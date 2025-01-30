@@ -16,8 +16,12 @@ import { SidebarTrigger } from "@/components/ui/sidebar"
 export function AppHeader() {
   return (
     
-    <header className="sticky top-0 z-10 flex h-16 border-none shadow-none rounded-lg items-center gap-4 border-b border-border bg-[#121315] px-6 backdrop-blur">
-      <SidebarTrigger className="bg-[#FF8D2A] text-white" />
+    <header className="sticky top-0 z-10  flex h-16 border-none shadow-none items-center gap-4 border-b border-border bg-[#121315] px-6 backdrop-blur">
+      {/* <SidebarTrigger className="bg-[#FF8D2A] text-white" /> */}
+      <div>
+      
+      <SidebarTrigger className=" text-[#FF8D2A] block sm:hidden item-center z-50" />
+      </div>
       <div className="ml-auto flex items-center gap-4">
         <div className="relative">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -34,6 +38,8 @@ export function AppHeader() {
         </Button>
       
       </div>
+
+      
     </header>
   )
 }

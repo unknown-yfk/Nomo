@@ -1,10 +1,12 @@
+
+
 "use client"
 import { useEffect, useState } from "react"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Users, BarChart2, UserCircle, PieChart, ArrowUp, ArrowDown } from "lucide-react"
+import { ArrowUp, ArrowDown } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 const chartData = [
@@ -19,8 +21,11 @@ const chartData = [
 
 const transactions = [
     {
-        id: "3321", image: "/main/ss.jpg", // Add the image path or URL here
-        product: "Phone 123", price: "$150.50", total: "$469.89"
+        id: "3321",
+        image: "/main/ss.jpg", // Add the image path or URL here
+        product: "Phone 123",
+        price: "$150.50",
+        total: "$469.89",
     },
     { id: "3322", image: "/main/ss.jpg", product: "Phone with long...", price: "$150.50", total: "$469.89" },
     { id: "3323", image: "/main/ss.jpg", product: "Phone 123", price: "$150.50", total: "$469.89" },
@@ -79,7 +84,7 @@ const popularItems = [
         profit: "$499,810.50",
         total: "$469.89",
     },
-];
+]
 
 const metrics = [
     { label: "Баланс", amount: "$32,123.00", change: 2.2, isPositive: true },
@@ -87,10 +92,7 @@ const metrics = [
     { label: "Витрати", amount: "$32,123.00", change: 2.2, isPositive: true },
 ]
 
-
-
 export function MainContents() {
-
     const [colors, setColors] = useState({ background: "", foreground: "" })
 
     useEffect(() => {
@@ -102,11 +104,10 @@ export function MainContents() {
 
     return (
         <div className="content" style={{ backgroundColor: colors.background, color: colors.foreground }}>
-
             <div className="space-y-8">
-                <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
-                    <Card className="bg-[#121315] text-[var(--foreground)]  border-none shadow-none rounded-lg">
-                        <CardContent className="flex items-center justify-between p-4 sm:p-6">
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
+                        <CardContent className="flex items-center justify-between p-4">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Всього замовлень</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
@@ -114,13 +115,12 @@ export function MainContents() {
                             <img
                                 src="/business/save-money-finance-business-svgrepo-com.svg"
                                 alt="Icon"
-                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                                className="h-12 w-12 object-contain"
                             />
                         </CardContent>
                     </Card>
-
                     <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
-                        <CardContent className="flex items-center justify-between p-4 sm:p-6">
+                        <CardContent className="flex items-center justify-between p-4">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Обсяг продажів</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
@@ -128,12 +128,12 @@ export function MainContents() {
                             <img
                                 src="/business/dollar-tag-finance-business-svgrepo-com.svg"
                                 alt="Icon"
-                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                                className="h-12 w-12 object-contain"
                             />
                         </CardContent>
                     </Card>
                     <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
-                        <CardContent className="flex items-center justify-between p-4 sm:p-6">
+                        <CardContent className="flex items-center justify-between p-4">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Кількість клієнтів</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
@@ -142,12 +142,12 @@ export function MainContents() {
                             <img
                                 src="/business/structure-organization-finance-svgrepo-com.svg"
                                 alt="Icon"
-                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                                className="h-12 w-12 object-contain"
                             />
                         </CardContent>
                     </Card>
                     <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
-                        <CardContent className="flex items-center justify-between p-4 sm:p-6">
+                        <CardContent className="flex items-center justify-between p-4">
                             <div className="space-y-1">
                                 <p className="text-xs sm:text-sm font-medium text-muted-foreground">Охоплений ринці</p>
                                 <p className="text-lg sm:text-2xl font-bold">142K</p>
@@ -156,7 +156,7 @@ export function MainContents() {
                             <img
                                 src="/business/money-bag-finance-business-svgrepo-com.svg"
                                 alt="Icon"
-                                className="h-8 w-8 sm:h-8 sm:w-8 object-contain"
+                                className="h-12 w-12 object-contain"
                             />
                         </CardContent>
                     </Card>
@@ -164,48 +164,53 @@ export function MainContents() {
 
                 <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                     <CardContent className="p-4 sm:p-6">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-5">
+                            <h3 className="text-lg text-white">Аналітика продажів</h3>
+                            <Select defaultValue="week">
+                                <SelectTrigger className="w-full sm:w-[180px] bg-transparent border-gray-700 text-gray-500">
+                                    <SelectValue placeholder="Select timeframe" />
+                                </SelectTrigger>
+                                <SelectContent className="bg-[#1c1d20] text-white">
+                                    <SelectItem value="day">День</SelectItem>
+                                    <SelectItem value="week">Тиждень</SelectItem>
+                                    <SelectItem value="month">Місяць</SelectItem>
+                                    <SelectItem value="year">Рік</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+
                         <div className="space-y-6">
                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                                 <div className="space-y-4 w-full sm:w-auto">
-                                    <h3 className="text-lg text-white">Аналітика продажів</h3>
-                                    <div className="flex flex-wrap gap-4 sm:gap-12">
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                         {metrics.map((metric, index) => (
+                                            <div key={index} className="flex flex-col items-start gap-2 p-2 rounded-lg">
+                                                {/* Metric label on top */}
+                                                <p className="text-sm text-gray-400">{metric.label}</p>
 
-
-                                            <div key={index} className="space-x-4 flex items-center">
-                                                <div>
-                                                    <p className="text-sm text-gray-500">{metric.label}</p>
+                                                <div className="flex items-center gap-4">
+                                                    {/* Metric amount */}
                                                     <p className="text-lg font-medium text-white">{metric.amount}</p>
+
+                                                    <div
+                                                        className={`flex items-center gap-1 text-xs px-2 py-1 rounded ${metric.isPositive ? "text-green-500 bg-green-900" : "text-red-500 bg-red-900"
+                                                            }`}
+                                                    >
+                                                        {metric.isPositive ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />}
+                                                        <span>{`${metric.isPositive ? "+" : "-"}${metric.change}%`}</span>
+                                                    </div>
+                                                    {index < metrics.length - 1 && <div className="border-l border-gray-700 h-8"></div>}
+
+
                                                 </div>
 
-                                                <div
-                                                    className={`flex items-center gap-1 text-xs px-2 py-1 rounded ${metric.isPositive ? "text-green-500 bg-green-900" : "text-red-500 bg-red-900"
-                                                        }`}
-                                                >
-                                                    {metric.isPositive ? (
-                                                        <ArrowUp className="h-3 w-3" />
-                                                    ) : (
-                                                        <ArrowDown className="h-3 w-3" />
-                                                    )}
-                                                    <span>{`${metric.isPositive ? "+" : "-"}${metric.change}%`}</span>
-                                                </div>
-
+                                                {/* Conditionally render the divider only if it's not the last item */}
                                             </div>
-
                                         ))}
                                     </div>
+
                                 </div>
-                                <Select defaultValue="week">
-                                    <SelectTrigger className="w-full sm:w-[180px] bg-transparent border-gray-700 text-gray-500">
-                                        <SelectValue placeholder="Select timeframe" />
-                                    </SelectTrigger>
-                                    <SelectContent className="bg-[#1c1d20]  text-white">
-                                        <SelectItem value="day">День</SelectItem>
-                                        <SelectItem value="week">Тиждень</SelectItem>
-                                        <SelectItem value="month">Місяць</SelectItem>
-                                        <SelectItem value="year">Рік</SelectItem>
-                                    </SelectContent>
-                                </Select>
                             </div>
                         </div>
 
@@ -233,36 +238,30 @@ export function MainContents() {
                     </CardContent>
                 </Card>
 
-
-
-                <div className="grid gap-5 md:grid-cols-[auto,1fr]">
-                    <Card className="bg-[#1c1d1f] text-[var(--foreground)] border-none shadow-none rounded-lg">
+                <div className="grid gap-5 lg:grid-cols-[1fr,2fr]">
+                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="p-0 h-full rounded-lg">
                             <Table className="rounded-lg overflow-hidden">
                                 <TableHeader>
-                                    <TableRow className="bg-[#1c1d1f]">
-                                        <TableHead>Останні операції</TableHead>
+                                    <TableRow className="bg-[#121315]">
+                                        <TableHead>Найпопулярніші позиції</TableHead>
                                         <TableHead className="text-right">•••</TableHead>
                                     </TableRow>
                                 </TableHeader>
-                                <TableBody className="bg-[#1c1d1f]">
+                                <TableBody className="bg-[#121315] ">
                                     {transactions.map((transaction) => (
-                                        <TableRow key={transaction.id}>
-                                            <TableCell className="font-medium">
+                                        <TableRow key={transaction.id} className="hover:bg-[#1c1d1f]">
+                                            <TableCell className="font-medium ">
                                                 <div className="flex items-center gap-3">
                                                     <img
-                                                        src={transaction.image}
+                                                        src={transaction.image || "/placeholder.svg"}
                                                         alt={transaction.product}
                                                         className="h-10 w-10 rounded-lg bg-gray-800"
                                                     />
-                                                    <span className="whitespace-nowrap text-ellipsis max-w-[150px]">
-                                                        {transaction.product}
-                                                    </span>
+                                                    <span className="whitespace-nowrap text-ellipsis max-w-[150px]">{transaction.product}</span>
                                                 </div>
                                             </TableCell>
-                                            <TableCell className="text-right whitespace-nowrap">
-                                                {transaction.total}
-                                            </TableCell>
+                                            <TableCell className="text-right whitespace-nowrap">{transaction.total}</TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
@@ -270,7 +269,7 @@ export function MainContents() {
                         </CardContent>
                     </Card>
 
-                    <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
+                    <Card className="bg-[#121315]  text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="p-0 h-full rounded-lg">
                             <div className="flex justify-between items-center px-4 py-2">
                                 <h2 className="text-lg font-bold">Найпопулярніші позиції</h2>
@@ -282,24 +281,19 @@ export function MainContents() {
                                 <TableHeader>
                                     <TableRow>
                                         <TableHead className="w-[300px]">Назва товару</TableHead>
-                                        <TableHead className="text-right hidden sm:table-cell">Ціна</TableHead>
-                                        <TableHead className="text-right hidden md:table-cell">
-                                            Продано
-                                        </TableHead>
+                                        <TableHead className="text-right">Ціна</TableHead>
+                                        <TableHead className="text-right">Продано</TableHead>
                                         <TableHead className="text-right">Прибуток</TableHead>
                                         <TableHead className="w-[50px]"></TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
                                     {popularItems.map((item) => (
-                                        <TableRow
-                                            key={item.id}
-                                            className="bg-[#1c1d1f] hover:bg-[#1c1d1f]"
-                                        >
+                                        <TableRow key={item.id} className="bg-[#121315] hover:bg-[#1c1d1f]">
                                             <TableCell className="font-medium">
                                                 <div className="flex items-center gap-3">
                                                     <img
-                                                        src={item.image}
+                                                        src={item.image || "/placeholder.svg"}
                                                         alt={item.product}
                                                         className="h-10 w-10 rounded-lg bg-gray-800"
                                                     />
@@ -309,12 +303,8 @@ export function MainContents() {
                                                     </div>
                                                 </div>
                                             </TableCell>
-                                            <TableCell className="text-right hidden sm:table-cell">
-                                                {item.price}
-                                            </TableCell>
-                                            <TableCell className="text-right hidden md:table-cell">
-                                                {item.sold}
-                                            </TableCell>
+                                            <TableCell className="text-right">{item.price}</TableCell>
+                                            <TableCell className="text-right">{item.sold}</TableCell>
                                             <TableCell className="text-right">{item.profit}</TableCell>
                                             <TableCell className="text-center text-gray-500">•••</TableCell>
                                         </TableRow>
@@ -324,9 +314,7 @@ export function MainContents() {
                         </CardContent>
                     </Card>
                 </div>
-
             </div>
-
         </div>
     )
 }
