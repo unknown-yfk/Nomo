@@ -360,16 +360,18 @@ import { OperationModal } from "./Dialog/operation-modal"
 import { useState } from "react"
 
 const sidebarItems = [
-  { title: "Аналітика", icon: BarChart3, path: "/business", hasDropdown: true },
-  { title: "Панель приладів", icon: Settings, path: "/business/", hasDropdown: true },
-  { title: "Продукти", icon: Box, path: "/business/products", hasDropdown: true },
-  { title: "Постачальники", icon: Building2, path: "/business/suppliers" },
-  { title: "Склад", icon: FileText, path: "/business/inventory" },
-  { title: "Співробітники", icon: Users, path: "/business/employees" },
-  { title: "Продажі", icon: CircleDollarSign, path: "/business/sales" },
-  { title: "Бухгалтерський облік", icon: BookOpen, path: "/business/accounting" },
-  { title: "Клієнти", icon: Users2, path: "/business/clients" },
-  { title: "Інтеграції", icon: ArrowDownToLine, path: "/business/integrations" },
+  // { title: "Аналітика", icon: BarChart3, path: "/business", hasDropdown: true },
+  { title: "Аналітика", icon: "/business/side.svg", path: "/business", hasDropdown: true },
+
+  { title: "Панель приладів", icon: "/business/side2.svg", path: "/business/", hasDropdown: true },
+  { title: "Продукти", icon:"/business/side3.svg", path: "/business/products", hasDropdown: true },
+  { title: "Постачальники", icon: "/business/side4.svg", path: "/business/suppliers" },
+  { title: "Склад", icon: "/business/side5.svg", path: "/business/inventory" },
+  { title: "Співробітники", icon:"/business/side6.svg", path: "/business/employees" },
+  { title: "Продажі", icon: "/business/side7.svg", path: "/business/sales" },
+  { title: "Бухгалтерський облік", icon: "/business/side8.svg", path: "/business/accounting" },
+  { title: "Клієнти", icon: "/business/side9.svg", path: "/business/clients" },
+  { title: "Інтеграції", icon: "/business/side10.svg", path: "/business/integrations" },
 ]
 
 export function AppSidebar() {
@@ -405,13 +407,34 @@ export function AppSidebar() {
                 className={`w-full justify-between gap-2 px-4 py-2 rounded-none text-zinc-400 hover:bg-[#FF8D2A] hover:text-white group ${pathname === item.path ? "text-[#FF8D2A]" : ""
                   } ${isCollapsed ? "justify-center" : ""}`}
               >
-                <Link href={item.path} className="flex items-center w-full">
+                {/* <Link href={item.path} className="flex items-center w-full">
                   <div className="flex items-center gap-3 flex-1">
                     <item.icon className="h-4 w-4 flex-shrink-0" />
+
+
+                    <img src='/business/side.svg' alt="icon" className="h-5 w-5" />
+
                     {!isCollapsed && <span className="text-sm flex-grow text-left">{item.title}</span>}
                   </div>
                   {!isCollapsed && item.hasDropdown && <ChevronRight className="h-4 w-4" />}
-                </Link>
+                </Link> */}
+
+<Link key={item.title} href={item.path} className="flex items-center w-full">
+          <div className="flex items-center gap-3 flex-1">
+            {/* Conditionally render icon */}
+            {typeof item.icon === "string" ? (
+              // Render the SVG image if item.icon is a string (SVG path)
+              <img src={item.icon} alt="icon" className="h-5 w-5" />
+            ) : (
+              // Render the React component if item.icon is a component
+              <item.icon className="h-4 w-4 flex-shrink-0" />
+            )}
+
+            {/* Display title */}
+            {!isCollapsed && <span className="text-sm flex-grow text-left">{item.title}</span>}
+          </div>
+          {!isCollapsed && item.hasDropdown && <ChevronRight className="h-4 w-4" />}
+        </Link>
               </Button>
             </SidebarMenuItem>
           ))}

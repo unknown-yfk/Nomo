@@ -245,7 +245,6 @@ export function MainContents() {
                                 <TableHeader>
                                     <TableRow className="bg-[#121315]">
                                         <TableHead>
-
                                             Аналітика продажів
                                         </TableHead>
                                         <TableHead className="text-right">•••</TableHead>
