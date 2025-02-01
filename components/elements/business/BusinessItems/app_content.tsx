@@ -244,7 +244,10 @@ export function MainContents() {
                             <Table className="rounded-lg overflow-hidden">
                                 <TableHeader>
                                     <TableRow className="bg-[#121315]">
-                                        <TableHead>Найпопулярніші позиції</TableHead>
+                                        <TableHead>
+
+                                            Аналітика продажів
+                                        </TableHead>
                                         <TableHead className="text-right">•••</TableHead>
                                     </TableRow>
                                 </TableHeader>
@@ -272,7 +275,12 @@ export function MainContents() {
                     <Card className="bg-[#121315]  text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="p-0 h-full rounded-lg">
                             <div className="flex justify-between items-center px-4 py-2">
-                                <h2 className="text-lg font-bold">Найпопулярніші позиції</h2>
+                                <h2 className="text-lg font-bold">
+                                Аналітика продажів
+
+
+                                    
+                                </h2>
                                 <a href="#" className="text-sm text-gray-400 hover:underline">
                                     View all
                                 </a>

@@ -383,13 +383,12 @@ export function AppSidebar() {
       {/* Sidebar Header */}
       <SidebarHeader className=" border-border py-4 pb-5 px-4 bg-[#121315]">
         <div className={`flex items-center gap-3 ${isCollapsed ? "justify-center" : ""}`}>
-          <div className="h-8 w-8 rounded-lg bg-[#FF8D2A] flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold text-lg">N</span>
-          </div>
+
           {!isCollapsed && (
-            <div className="flex flex-col">
-              <span className="text-base font-semibold">Nomocash</span>
-              <span className="text-sm text-[#FF8D2A]">Business</span>
+
+
+            <div className="flex items-center justify-end">
+              <img src="/business/Logo business.svg" alt="Nomocash Logo" className="w-32 h-auto object-contain" />
             </div>
           )}
         </div>
@@ -403,9 +402,8 @@ export function AppSidebar() {
               <Button
                 asChild
                 variant="ghost"
-                className={`w-full justify-between gap-2 px-4 py-2 rounded-none text-zinc-400 hover:bg-[#FF8D2A] hover:text-white group ${
-                  pathname === item.path ? "text-[#FF8D2A]" : ""
-                } ${isCollapsed ? "justify-center" : ""}`}
+                className={`w-full justify-between gap-2 px-4 py-2 rounded-none text-zinc-400 hover:bg-[#FF8D2A] hover:text-white group ${pathname === item.path ? "text-[#FF8D2A]" : ""
+                  } ${isCollapsed ? "justify-center" : ""}`}
               >
                 <Link href={item.path} className="flex items-center w-full">
                   <div className="flex items-center gap-3 flex-1">
