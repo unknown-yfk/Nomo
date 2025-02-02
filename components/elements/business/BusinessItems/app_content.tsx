@@ -103,8 +103,8 @@ export function MainContents() {
     }, [])
 
     return (
-        <div className="content" style={{ backgroundColor: colors.background, color: colors.foreground }}>
-            <div className="space-y-8">
+        <div className="content " style={{ backgroundColor: colors.background, color: colors.foreground }}>
+            <div className="space-y-8 ">
                 <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <Card className="bg-[#121315] text-[var(--foreground)] border-none shadow-none rounded-lg">
                         <CardContent className="flex items-center justify-between p-4">

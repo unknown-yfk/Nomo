@@ -381,7 +381,7 @@ export function AppSidebar() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <Sidebar className="border-r  border-border bg-[#121315] border-none shadow-none text-white w-[257px] flex flex-col justify-between p-0">
+    <Sidebar className="border-r  border-border bg-[#121315] leading-[32px] border-none shadow-none text-white w-[257px] flex flex-col justify-between p-0">
       {/* Sidebar Header */}
       <SidebarHeader className=" border-border py-4 pb-5 px-4 bg-[#121315]">
         <div className={`flex items-center gap-3 ${isCollapsed ? "justify-center" : ""}`}>
