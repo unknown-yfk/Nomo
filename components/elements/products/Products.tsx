@@ -28,7 +28,7 @@ const products: Product[] = Array(12)
   }))
 
 export function ProductsView() {
-  const [viewMode, setViewMode] = React.useState<"list" | "grid">("grid")
+  const [viewMode, setViewMode] = React.useState<"list" | "grid">("list")
 
   return (
     <div className="min-h-screen bg-black">
