@@ -7,7 +7,7 @@ export default function ConditionalFooter() {
   const pathname = usePathname()
 
   // Only render Header if not on the portfolio page
-  if (pathname === '/portfolio' || pathname === '/business' || pathname === '/business/products') return null
+  if (pathname === '/portfolio' || pathname === '/business' || pathname === '/business/products' ||  pathname.startsWith("/business/products/")) return null
 
   return <Footer />
 }

@@ -8,7 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Image from "next/image"
-
+import { useRouter } from "next/navigation"
 interface Product {
   id: number
   name: string
@@ -29,6 +29,7 @@ const products: Product[] = Array(12)
 
 export function ProductsView() {
   const [viewMode, setViewMode] = React.useState<"list" | "grid">("list")
+  const router = useRouter()
 
   return (
     <div className="min-h-screen bg-black">
@@ -100,7 +101,10 @@ export function ProductsView() {
                       <Button
                         variant="ghost"
                         className="bg-[#FF8D2A] bg-opacity-60 text-orange-400 hover:bg-[#FF8D2A] hover:bg-opacity-90 rounded-sm h-6 px-3 text-xs font-normal"
-                      >
+                     
+                        onClick={() => router.push(`products/${product.id}`)}
+                     
+                     >
                         Деталі
                         <ChevronRight className="h-4 w-4" />
                       </Button>
@@ -124,10 +128,21 @@ export function ProductsView() {
                   </div>
                   <h3 className="text-gray-400 text-sm mb-3">{product.name}</h3>
                   <div className="flex flex-col gap-2">
-                    <button className="text-[#FF8D2A] text-xs hover:text-[#FF8D2A]/80 text-left flex items-center justify-between group">
+
+
+             
+                    <button className="text-[#FF8D2A] text-xs hover:text-[#FF8D2A]/80 text-left flex items-center justify-between group"
+                    
+                    onClick={() => router.push(`products/${product.id}`)}
+                    >
                       Деталі
                       <ChevronRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
                     </button>
+
+
+
+
+
                     <button className="text-[#FF8D2A] text-xs hover:text-[#FF8D2A]/80 text-left flex items-center justify-between group">
                       Складники
                       <ChevronRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
