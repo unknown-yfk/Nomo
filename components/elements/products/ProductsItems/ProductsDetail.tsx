@@ -141,7 +141,7 @@ export default function ProductDetails({ id }: ProductDetailsProps) {
               <div>
                 <Label className="text-xs text-gray-500">EAN</Label>
                 <div className="mt-1">
-                  <Input readOnly className="bg-[#1c1d20] border-none text-sm text-gray-400" />
+                  <Input readOnly className="bg-[#1c1d20] border-none text-sm text-gray-400 rounded-lg" />
                 </div>
               </div>
             </div>
